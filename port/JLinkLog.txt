@@ -1,0 +1,68 @@
+T0D68 185:430.392   SEGGER J-Link V6.62c Log File
+T0D68 185:430.454   DLL Compiled: Feb 21 2020 17:43:19
+T0D68 185:430.462   Logging started @ 2020-02-28 12:33
+T0D68 185:430.473 JLINK_SetWarnOutHandler(...)
+T0D68 185:430.480 - 0.010ms
+T0D68 185:430.488 JLINK_OpenEx(...)
+T0D68 185:431.715   Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+T0D68 185:434.238   Hardware: V8.00
+T0D68 185:434.256   S/N: 4294967295
+T0D68 185:434.264   OEM: SEGGER
+T0D68 185:434.272   Feature(s): RDI,FlashDL,FlashBP,JFlash,GDB
+T0D68 185:435.302   TELNET listener socket opened on port 19021
+T0D68 185:438.849   Device "AT91SAM7S64" selected.
+T0D68 185:439.369   WEBSRV Starting webserver
+T0D68 185:439.544   WEBSRV Webserver running on local port 19080
+T0D68 185:439.557 - 9.072ms returns "O.K."
+T0D68 185:439.577 JLINK_GetEmuCaps()
+T0D68 185:439.583 - 0.008ms returns 0xB9FF7BBF
+T0D68 185:440.047 JLINK_TIF_GetAvailable(...)
+T0D68 185:440.208 - 0.171ms
+T0D68 185:440.226 JLINK_SetErrorOutHandler(...)
+T0D68 185:440.231 - 0.008ms
+T0D68 185:440.242 JLINK_ExecCommand("ProjectFile = "C:\git\ARM\port\JLinkSettings.ini"", ...). 
+T0D68 185:440.703   Device "AT91SAM7S64" selected.
+T0D68 185:440.950 - 0.714ms returns 0x00
+T0D68 185:440.964 JLINK_ExecCommand("Device = MDR1986BE92", ...). 
+T0D68 185:441.142   Device "AT91SAM7S64" selected.
+T0D68 185:441.357 - 0.384ms returns 0x00
+T0D68 185:441.368 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T0D68 185:441.378 - 0.006ms returns 0x01
+T0D68 185:441.387 JLINK_GetHardwareVersion()
+T0D68 185:441.392 - 0.008ms returns 0x13880
+T0D68 185:441.399 JLINK_GetDLLVersion()  returns 66203
+T0D68 185:441.407 JLINK_GetFirmwareString(...)
+T0D68 185:441.413 - 0.007ms
+T0D68 185:441.421 JLINK_GetDLLVersion()  returns 66203
+T0D68 185:441.428 JLINK_GetCompileDateTime()
+T0D68 185:441.433 - 0.007ms
+T0D68 185:441.440 JLINK_GetFirmwareString(...)
+T0D68 185:441.445 - 0.007ms
+T0D68 185:441.452 JLINK_GetHardwareVersion()
+T0D68 185:441.457 - 0.007ms returns 0x13880
+T0D68 185:441.470 JLINK_TIF_Select(JLINKARM_TIF_JTAG)
+T0D68 185:442.121 - 0.674ms returns 0x00
+T0D68 185:442.156 JLINK_SetSpeed(5000)
+T0D68 185:442.268 - 0.122ms
+T0D68 185:442.453 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T0D68 185:442.463 - 0.013ms returns JLINKARM_RESET_TYPE_SAM7
+T0D68 185:442.471 JLINK_Reset()
+T0D68 185:443.561   Could not measure total IR len. TDO is constant high.
+T0D68 185:645.216   RESET (pin 15) high, but should be low. Please check target hardware.
+T0D68 185:798.303   Could not measure total IR len. TDO is constant high.
+T0D68 185:798.891 JLINK_GetIdData(pIdData)
+T0D68 185:801.054   Could not measure total IR len. TDO is constant high.
+T0D68 186:003.155   RESET (pin 15) high, but should be low. Please check target hardware.
+T0D68 186:155.166   Could not measure total IR len. TDO is constant high.
+T0D68 186:155.724 - 356.870ms
+T0D68 186:155.795 JLINK_GetIdData(pIdData)
+T0D68 186:157.337   Could not measure total IR len. TDO is constant high.
+T0D68 186:359.780   RESET (pin 15) high, but should be low. Please check target hardware.
+T0D68 186:512.934   Could not measure total IR len. TDO is constant high.
+T0D68 186:513.486 - 357.729ms
+T0D68 186:520.490 JLINK_GetFirmwareString(...)
+T0D68 186:520.547 - 0.069ms
+T0D68 188:115.247 JLINK_Close()
+T0D68 188:121.308 - 6.071ms
+T0D68 188:121.322   
+T0D68 188:121.327   Closed
