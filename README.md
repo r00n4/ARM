@@ -1,6 +1,6 @@
 # STM32
-stm labs
-  
+stm labs  
+Milandr ic based USB mass storage device
   
   https://microtechnics.ru/stm32-uchebnyj-kurs-keil-sozdanie-proekta/
   
@@ -8,4 +8,5 @@ stm labs
   
   http://visual-coding.com/index.php/zhelezo/stm32/42-statya-1-po-stm
   
-  https://habr.com/ru/post/255323/
+  https://habr.com/ru/post/255323/  
+  
