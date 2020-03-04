@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp
+"tim_prj\startup_stm32f407xx.o"
+"tim_prj\main.o"
+"tim_prj\stm32f4xx_it.o"
+"tim_prj\stm32f4xx_hal_msp.o"
+"tim_prj\stm32f4xx_hal_tim.o"
+"tim_prj\stm32f4xx_hal_tim_ex.o"
+"tim_prj\stm32f4xx_hal_rcc.o"
+"tim_prj\stm32f4xx_hal_rcc_ex.o"
+"tim_prj\stm32f4xx_hal_flash.o"
+"tim_prj\stm32f4xx_hal_flash_ex.o"
+"tim_prj\stm32f4xx_hal_flash_ramfunc.o"
+"tim_prj\stm32f4xx_hal_gpio.o"
+"tim_prj\stm32f4xx_hal_dma_ex.o"
+"tim_prj\stm32f4xx_hal_dma.o"
+"tim_prj\stm32f4xx_hal_pwr.o"
+"tim_prj\stm32f4xx_hal_pwr_ex.o"
+"tim_prj\stm32f4xx_hal_cortex.o"
+"tim_prj\stm32f4xx_hal.o"
+"tim_prj\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "tim_prj\tim_prj.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "tim_prj.map" -o tim_prj\tim_prj.axf

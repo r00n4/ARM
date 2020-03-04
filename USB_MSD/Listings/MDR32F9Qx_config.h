@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    MDR32F9Qx_Demo\Project\Demo\MDR32F9Qx_config.h
+  * @file    Examples\MDR19986VE9x\MDR32F9Q2_EVAL\MDR32F9Qx_config.h
   * @author  Milandr Application Team
   * @version V1.2.0
   * @date    10/07/2010
@@ -14,14 +14,14 @@
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
-  * <h2><center>&copy; COPYRIGHT 2014 Milandr</center></h2>
+  * <h2><center>&copy; COPYRIGHT 2013 Milandr</center></h2>
   */
 
 /**
  * @mainpage MDR32F9Qx Standard Peripherals Library.
  * MDR32F9Qx Standard Peripherals Library is a package consisting of
- * all standard peripheral device drivers for 1986BE9x, K1986BE9x, MDR32F9Qx,
- * 1986VE1T, 1986VE3T, 1986VE7T microcontrollers.
+ * all standard peripheral device drivers for 1986BE9x, K1986BE9x, MDR32F9Qx
+ * and 1986VE1T microcontrollers.
  * This library is a firmware package which contains a collection of routines,
  * data structures and macros covering the features of Milandr MDR32F9Qx
  * peripherals. It includes a description of the device drivers plus a set of
@@ -33,8 +33,8 @@
  * integration costs.
  *
  * The MDR32F9Qx Standard Peripherals Library is compatible with Milandr
- * 1986BE9x evaluation boards, Milandr evaluation board for MC 1986VE1T
- * (EVAL 22.0 B) and evaluation board for MC 1986VE3T.
+ * 1986BE9x evaluation boards and Milandr evaluation board for MC 1986VE1T
+ * (EVAL 22.0 B).
  *
  * The MDR32F9Qx Standard Peripherals Library is full CMSIS compliant.
  */
@@ -43,11 +43,9 @@
 #ifndef __MDR32F9Qx_CONFIG_H
 #define __MDR32F9Qx_CONFIG_H
 
-#if ((__CC_ARM == 0) || (__ARMCC_VERSION < 5000000))
-	#include "MDR32F9Qx_board.h"
-#endif
-//#include "MDR32F9Qx_lib.h"  - не компилируется если не подключено хотя бы одного драйвера, не видит пути
-#include <stdint.h>
+#include "MDR32F9Qx_board.h"
+#include "MDR32F9Qx_lib.h"
+#include "stdint.h"
 
 #if defined (USE_MDR32F9Q1_Rev0) || defined (USE_MDR32F9Q1_Rev1) ||\
     defined (USE_MDR32F9Q2_Rev0) || defined (USE_MDR32F9Q2_Rev1) ||\
@@ -56,9 +54,6 @@
 	#define USE_MDR1986VE9x
 #endif
 
-#if defined (USE_MDR1986BE7T)
-	#define USE_MDR1986VE1T
-#endif
 
 /* Selet the header file for target microcontroller */
 #if defined ( USE_MDR1986VE9x )
@@ -67,16 +62,12 @@
 	#include "MDR1986VE1T.h"
 #elif defined ( USE_MDR1986VE3 )
 	#include "MDR1986VE3.h"
-#elif defined ( USE_MDR1901VC1T )
-	#include "MDR1901VC1T.h"
-#elif defined (USE_MDR1986BE4)
-	#include "MDR1986BE4.h"
 #endif
 
 /* Uncomment the line(s) below to define used JTAG port(s). Leave all commented
  * if there is no JTAG ports */
-#if (defined(USE_MDR1986VE9x) || defined (USE_MDR1901VC1T))
- //#define USE_JTAG_A 
+#if (((!defined(USE_MDR1986VE3)) || (!defined(USE_MDR1986VE1T))) && (defined(USE_MDR1986VE9x)))
+/* #define USE_JTAG_A */
  #define USE_JTAG_B 
 #endif
 
@@ -96,11 +87,10 @@
 #define LSIonTimeOut    ((uint16_t)0x0600)
 #define PLLCPUonTimeOut ((uint16_t)0x0600)
 #define PLLUSBonTimeOut ((uint16_t)0x0600)
-#define PLLDSPonTimeOut ((uint16_t)0x0600)
 
 #define FLASH_PROG_FREQ_MHZ     (8.0)
 /* Use debug uart */
-//#define _USE_DEBUG_UART_
+#define _USE_DEBUG_UART_
 
 #if defined (_USE_DEBUG_UART_)
 
@@ -109,25 +99,19 @@
 	#define DEBUG_UART_PORT				MDR_PORTD
 	#define DEBUG_UART_PINS				(PORT_Pin_13 | PORT_Pin_14)
 	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_MAIN
-	#define DEBUG_BAUD_RATE				115200
+	#define DEBUG_BAUD_RATE				230400
 #elif defined (USE_MDR1986VE1T)
 	#define DEBUG_UART 					MDR_UART1
 	#define DEBUG_UART_PORT				MDR_PORTC
 	#define DEBUG_UART_PINS				(PORT_Pin_3 | PORT_Pin_4)
 	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_MAIN
-	#define DEBUG_BAUD_RATE				115200
+	#define DEBUG_BAUD_RATE				230400
 #elif defined (USE_MDR1986VE9x)
 	#define DEBUG_UART 					MDR_UART2
 	#define DEBUG_UART_PORT				MDR_PORTF
 	#define DEBUG_UART_PINS				(PORT_Pin_0 | PORT_Pin_1)
 	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_OVERRID
-	#define DEBUG_BAUD_RATE				115200
-#elif defined (USE_MDR1901VC1T)
-	#define DEBUG_UART 			MDR_UART3
-	#define DEBUG_UART_PORT			MDR_PORTF
-	#define DEBUG_UART_PINS			(PORT_Pin_0 | PORT_Pin_1)
-	#define DEBUG_UART_PINS_FUNCTION	PORT_FUNC_ALTER
-	#define DEBUG_BAUD_RATE			115200
+	#define DEBUG_BAUD_RATE				230400
 #endif
 
 //#define PRINTF_FORMAT_FULL
@@ -170,12 +154,12 @@
 
 /* USB CDC management */
 /* Uncomment the lines below to enable appropriate functionality. */
-/* #define USB_CDC_STATE_REPORTING_SUPPORTED 	*/
-/* #define USB_CDC_ENCAPSULATION_SUPPORTED 	*/
-/* #define USB_CDC_COMM_FEATURE_SUPPORTED 	*/
-#define USB_CDC_LINE_CODING_SUPPORTED 	
+/* #define USB_CDC_STATE_REPORTING_SUPPORTED */
+/* #define USB_CDC_ENCAPSULATION_SUPPORTED */
+/* #define USB_CDC_COMM_FEATURE_SUPPORTED */
+#define USB_CDC_LINE_CODING_SUPPORTED
 /* #define USB_CDC_CONTROL_LINE_STATE_SUPPORTED */
-/* #define USB_CDC_LINE_BREAK_SUPPORTED 	*/
+/* #define USB_CDC_LINE_BREAK_SUPPORTED */
 
 /* VCOM Echo example flags */
 
@@ -239,12 +223,8 @@
 		#define IAR_SECTION(section)
 #endif
 
-#if defined (__CC_ARM)
-	#define IAR_SECTION(section)
-#endif
-
 #endif /* __MDR32F9Qx_CONFIG_H */
 
-/******************* (C) COPYRIGHT 2011 Milandr *********************************
+/******************* (C) COPYRIGHT 2013 Milandr *********************************
 *
 * END OF FILE MDR32F9Qx_config.h */
