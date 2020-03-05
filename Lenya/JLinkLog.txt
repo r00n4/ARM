@@ -706,3 +706,6 @@ T1F6C 14953:462 JLINK_ReadMemEx(0x08000362, 0x0002 Bytes, ..., Flags = 0x0200000
 T1F6C 14953:462 JLINK_ReadMemEx(0x08000362, 0x0002 Bytes, ..., Flags = 0x02000000) -- Read from DA cache (2 bytes @ 0x08000362) - Data: 02 40  returns 0x02 (0000ms, 38298ms total)
 T1F6C 14953:462 JLINK_ReadMemEx(0x08000364, 0x003C Bytes, ..., Flags = 0x02000000) -- Read from DA cache (60 bytes @ 0x08000364) - Data: 00 00 0B 40 00 80 0B 40 8C 03 00 08 00 00 00 20 ...  returns 0x3C (0000ms, 38298ms total)
 T1F6C 14953:462 JLINK_ReadMemEx(0x08000364, 0x0002 Bytes, ..., Flags = 0x02000000) -- Read from DA cache (2 bytes @ 0x08000364) - Data: 00 00  returns 0x02 (0000ms, 38298ms total)
+T1F6C 17171:475 JLINK_Close() -- CPU_WriteMem(4 bytes @ 0xE0002008) -- CPU_ReadMem(4 bytes @ 0xE0001000) >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> (0012ms, 38310ms total)
+T1F6C 17171:475  (0012ms, 38310ms total)
+T1F6C 17171:475 Closed (0012ms, 38310ms total)
