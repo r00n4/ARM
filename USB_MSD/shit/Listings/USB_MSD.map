@@ -1,0 +1,1825 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.Setup_USB) refers to mdr32f9qx_usb.o(i.USB_SetSIM) for USB_SetSIM
+    main.o(i.Setup_USB) refers to main.o(.data) for USB_Clock_InitStruct
+    main.o(i.Setup_USB) refers to main.o(.bss) for USB_DeviceBUSParam
+    main.o(i.USB_CDC_GetLineCoding) refers to main.o(.data) for LineCoding
+    main.o(i.USB_CDC_SetLineCoding) refers to main.o(.data) for LineCoding
+    main.o(i.VCom_Configuration) refers to main.o(.data) for LineCoding
+    main.o(i.main) refers to main.o(i.VCom_Configuration) for VCom_Configuration
+    main.o(i.main) refers to main.o(i.Setup_CPU_Clock) for Setup_CPU_Clock
+    main.o(i.main) refers to main.o(i.Setup_USB) for Setup_USB
+    main.o(i.main) refers to main.o(.bss) for Buffer
+    rtx_lib.o(i.__user_perthread_libspace) refers to rtx_lib.o(i.os_kernel_is_active) for os_kernel_is_active
+    rtx_lib.o(i.__user_perthread_libspace) refers to rtx_thread.o(.text.osThreadGetId) for osThreadGetId
+    rtx_lib.o(i.__user_perthread_libspace) refers to rtx_config.o(i.osRtxErrorNotify) for osRtxErrorNotify
+    rtx_lib.o(i.__user_perthread_libspace) refers to rtx_lib.o(.bss.os.libspace) for os_libspace_id
+    rtx_lib.o(i._mutex_acquire) refers to rtx_lib.o(i.os_kernel_is_active) for os_kernel_is_active
+    rtx_lib.o(i._mutex_acquire) refers to rtx_mutex.o(.text.osMutexAcquire) for osMutexAcquire
+    rtx_lib.o(i._mutex_free) refers to rtx_mutex.o(.text.osMutexDelete) for osMutexDelete
+    rtx_lib.o(i._mutex_initialize) refers to rtx_mutex.o(.text.osMutexNew) for osMutexNew
+    rtx_lib.o(i._mutex_initialize) refers to rtx_config.o(i.osRtxErrorNotify) for osRtxErrorNotify
+    rtx_lib.o(i._mutex_release) refers to rtx_lib.o(i.os_kernel_is_active) for os_kernel_is_active
+    rtx_lib.o(i._mutex_release) refers to rtx_mutex.o(.text.osMutexRelease) for osMutexRelease
+    rtx_lib.o(i._platform_post_stackheap_init) refers to rtx_kernel.o(.text.osKernelInitialize) for osKernelInitialize
+    rtx_lib.o(i.os_kernel_is_active) refers to rtx_kernel.o(.text.osKernelGetState) for osKernelGetState
+    rtx_lib.o(i.os_kernel_is_active) refers to rtx_lib.o(.data) for os_kernel_active
+    rtx_lib.o(.constdata) refers to rtx_lib.o(.bss.os.thread.cb) for os_idle_thread_cb
+    rtx_lib.o(.constdata) refers to rtx_lib.o(.bss.os.thread.stack) for os_idle_thread_stack
+    rtx_lib.o(.constdata) refers to rtx_lib.o(.bss.os.msgqueue.cb) for os_timer_mq_cb
+    rtx_lib.o(.constdata) refers to rtx_lib.o(.bss.os.msgqueue.mem) for os_timer_mq_data
+    rtx_lib.o(.data) refers to irq_cm3.o(.constdata) for irqRtxLib
+    rtx_lib.o(.rodata) refers to rtx_lib.o(.bss.os) for os_isr_queue
+    rtx_lib.o(.rodata) refers to rtx_lib.o(.constdata) for os_idle_thread_attr
+    startup_mdr32f9qx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(RESET) refers to startup_mdr32f9qx.o(STACK) for __initial_sp
+    startup_mdr32f9qx.o(RESET) refers to startup_mdr32f9qx.o(.text) for Reset_Handler
+    startup_mdr32f9qx.o(RESET) refers to irq_cm3.o(.text) for SVC_Handler
+    startup_mdr32f9qx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_mdr32f9qx.o(.text) refers to system_mdr32f9qx.o(i.SystemInit) for SystemInit
+    startup_mdr32f9qx.o(.text) refers to __main.o(!!!main) for __main
+    startup_mdr32f9qx.o(.text) refers to startup_mdr32f9qx.o(HEAP) for Heap_Mem
+    startup_mdr32f9qx.o(.text) refers to startup_mdr32f9qx.o(STACK) for Stack_Mem
+    system_mdr32f9qx.o(i.SystemCoreClockUpdate) refers to system_mdr32f9qx.o(.data) for SystemCoreClock
+    system_mdr32f9qx.o(i.SystemInit) refers to system_mdr32f9qx.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    mdr32f9qx_usb.o(i.USB_Reset) refers to mdr32f9qx_usb.o(i.USB_SetHSCR) for USB_SetHSCR
+    usbd_config_0.o(i.USBD0_SignalDeviceEvent) refers to usbd_lib_drv.o(i.USBD_SignalDeviceEvent) for USBD_SignalDeviceEvent
+    usbd_config_0.o(i.USBD0_SignalEndpointEvent) refers to usbd_lib_drv.o(i.USBD_SignalEndpointEvent) for USBD_SignalEndpointEvent
+    usbd_config_0.o(i.USBD_ClassInitialize) refers to usbd_lib_msc.o(i.USBD_MSC_Initialize) for USBD_MSC_Initialize
+    usbd_config_0.o(i.USBD_ClassInitialize) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_config_0.o(i.USBD_ClassUninitialize) refers to usbd_lib_msc.o(i.USBD_MSC_Uninitialize) for USBD_MSC_Uninitialize
+    usbd_config_0.o(i.USBD_ClassUninitialize) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_config_0.o(i.USBD_Delay) refers to rtx_kernel.o(.text.osKernelGetTickFreq) for osKernelGetTickFreq
+    usbd_config_0.o(i.USBD_Delay) refers to rtx_delay.o(.text.osDelay) for osDelay
+    usbd_config_0.o(i.USBD_Delay) refers to usbd_config_0.o(.data) for kernel_tick_freq
+    usbd_config_0.o(i.USBD_Device0_Reset) refers to usbd_config_0.o(i.USBD_Device0_EventReset) for USBD_Device0_EventReset
+    usbd_config_0.o(i.USBD_EndpointStart) refers to usbd_lib_msc.o(i.USBD_MSC_EndpointStart) for USBD_MSC_EndpointStart
+    usbd_config_0.o(i.USBD_EndpointStart) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_config_0.o(i.USBD_MSC0_LUN_CheckMedia) refers to usbd_config_0.o(i.USBD_MSC0_CheckMedia) for USBD_MSC0_CheckMedia
+    usbd_config_0.o(i.USBD_MSC0_LUN_GetMediaCapacity) refers to usbd_config_0.o(i.USBD_MSC0_GetMediaCapacity) for USBD_MSC0_GetMediaCapacity
+    usbd_config_0.o(i.USBD_MSC0_LUN_Read) refers to usbd_config_0.o(i.USBD_MSC0_Read) for USBD_MSC0_Read
+    usbd_config_0.o(i.USBD_MSC0_LUN_StartStop) refers to usbd_config_0.o(i.USBD_MSC0_StartStop) for USBD_MSC0_StartStop
+    usbd_config_0.o(i.USBD_MSC0_LUN_Write) refers to usbd_config_0.o(i.USBD_MSC0_Write) for USBD_MSC0_Write
+    usbd_config_0.o(i.USBD_Reset) refers to usbd_lib_msc.o(i.USBD_MSC_Reset) for USBD_MSC_Reset
+    usbd_config_0.o(i.USBD_Reset) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_config_0.o(i.USBD_SemaphoreAcquire) refers to rtx_kernel.o(.text.osKernelGetTickFreq) for osKernelGetTickFreq
+    usbd_config_0.o(i.USBD_SemaphoreAcquire) refers to rtx_semaphore.o(.text.osSemaphoreAcquire) for osSemaphoreAcquire
+    usbd_config_0.o(i.USBD_SemaphoreAcquire) refers to usbd_config_0.o(.data) for kernel_tick_freq
+    usbd_config_0.o(i.USBD_SemaphoreCreate) refers to rtx_semaphore.o(.text.osSemaphoreNew) for osSemaphoreNew
+    usbd_config_0.o(i.USBD_SemaphoreCreate) refers to usbd_config_0.o(.bss.os.semaphore.cb) for usbd_driver_semaphore_cb_mem
+    usbd_config_0.o(i.USBD_SemaphoreDelete) refers to rtx_semaphore.o(.text.osSemaphoreDelete) for osSemaphoreDelete
+    usbd_config_0.o(i.USBD_SemaphoreRelease) refers to rtx_semaphore.o(.text.osSemaphoreRelease) for osSemaphoreRelease
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to rtx_thread.o(.text.osThreadNew) for osThreadNew
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to usbd_config_0.o(.constdata) for usbd_core_thread_attr
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to usbd_lib_core.o(i.USBD_Core_Thread) for USBD_Core_Thread
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to usbd_config_0.o(.data) for usbd_msc_thread_name
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to usbd_config_0.o(.bss.os.thread.cb) for usbd_msc_thread_cb_mem
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to usbd_config_0.o(.bss.os.thread.stack) for usbd_msc_thread_stack_mem
+    usbd_config_0.o(i.USBD_ThreadCreate) refers to usbd_lib_msc.o(i.USBD_MSC_Thread) for USBD_MSC_Thread
+    usbd_config_0.o(i.USBD_ThreadFlagsSet) refers to rtx_thread.o(.text.osThreadFlagsSet) for osThreadFlagsSet
+    usbd_config_0.o(i.USBD_ThreadFlagsWait) refers to rtx_kernel.o(.text.osKernelGetTickFreq) for osKernelGetTickFreq
+    usbd_config_0.o(i.USBD_ThreadFlagsWait) refers to rtx_thread.o(.text.osThreadFlagsWait) for osThreadFlagsWait
+    usbd_config_0.o(i.USBD_ThreadFlagsWait) refers to lludivv7m.o(.text) for __aeabi_uldivmod
+    usbd_config_0.o(i.USBD_ThreadFlagsWait) refers to usbd_config_0.o(.data) for kernel_tick_freq
+    usbd_config_0.o(i.USBD_ThreadTerminate) refers to rtx_thread.o(.text.osThreadTerminate) for osThreadTerminate
+    usbd_config_0.o(i.USBD_TimerDelete) refers to rtx_timer.o(.text.osTimerDelete) for osTimerDelete
+    usbd_config_0.o(i.USBD_TimerStart) refers to rtx_kernel.o(.text.osKernelGetTickFreq) for osKernelGetTickFreq
+    usbd_config_0.o(i.USBD_TimerStart) refers to rtx_timer.o(.text.osTimerStart) for osTimerStart
+    usbd_config_0.o(i.USBD_TimerStart) refers to usbd_config_0.o(.data) for kernel_tick_freq
+    usbd_config_0.o(i.USBD_TimerStop) refers to rtx_timer.o(.text.osTimerStop) for osTimerStop
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(.data) for usbd0_alt_setting
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(.bss) for usbd0_ep0_buf
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(.conststring) for .conststring
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(.bss.os.thread.cb) for usbd0_core_thread_cb_mem
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(.bss.os.thread.stack) for usbd0_core_thread_stack_mem
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD0_SignalDeviceEvent) for USBD0_SignalDeviceEvent
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD0_SignalEndpointEvent) for USBD0_SignalEndpointEvent
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_Initialize) for USBD_MSC0_Initialize
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_Uninitialize) for USBD_MSC0_Uninitialize
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_GetCacheInfo) for USBD_MSC0_GetCacheInfo
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_GetMaxLUN) for USBD_MSC0_GetMaxLUN
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_LUN_GetMediaCapacity) for USBD_MSC0_LUN_GetMediaCapacity
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_LUN_Read) for USBD_MSC0_LUN_Read
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_LUN_Write) for USBD_MSC0_LUN_Write
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_LUN_StartStop) for USBD_MSC0_LUN_StartStop
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_MSC0_LUN_CheckMedia) for USBD_MSC0_LUN_CheckMedia
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Initialize) for USBD_Device0_Initialize
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Uninitialize) for USBD_Device0_Uninitialize
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_VbusChanged) for USBD_Device0_VbusChanged
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Reset) for USBD_Device0_Reset
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_HighSpeedActivated) for USBD_Device0_HighSpeedActivated
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Suspended) for USBD_Device0_Suspended
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Resumed) for USBD_Device0_Resumed
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_ConfigurationChanged) for USBD_Device0_ConfigurationChanged
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_EnableRemoteWakeup) for USBD_Device0_EnableRemoteWakeup
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_DisableRemoteWakeup) for USBD_Device0_DisableRemoteWakeup
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Endpoint0_SetupPacketReceived) for USBD_Device0_Endpoint0_SetupPacketReceived
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Endpoint0_SetupPacketProcessed) for USBD_Device0_Endpoint0_SetupPacketProcessed
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Endpoint0_OutDataReceived) for USBD_Device0_Endpoint0_OutDataReceived
+    usbd_config_0.o(.constdata) refers to usbd_config_0.o(i.USBD_Device0_Endpoint0_InDataSent) for USBD_Device0_Endpoint0_InDataSent
+    usbd_config_0.o(.data) refers to usbd_config_0.o(.conststring) for .conststring
+    usbd_config_0.o(.data) refers to usbd_config_0.o(.constdata) for usbd0_ep0_descriptor
+    usbd_config_0.o(.data) refers to usbd_config_0.o(.bss) for usbd0_ser_num_string_descriptor
+    rtx_kernel.o(.ARM.exidx.text.osRtxKernelPreInit) refers to rtx_kernel.o(.text.osRtxKernelPreInit) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelInitialize) refers to rtx_kernel.o(.text.osRtxKernelPreInit) for osRtxKernelPreInit
+    rtx_kernel.o(.text.osKernelInitialize) refers to rtx_kernel.o(.text.svcRtxKernelInitialize) for svcRtxKernelInitialize
+    rtx_kernel.o(.ARM.exidx.text.osKernelInitialize) refers to rtx_kernel.o(.text.osKernelInitialize) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetInfo) refers to rtx_kernel.o(.text.svcRtxKernelGetInfo) for svcRtxKernelGetInfo
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetInfo) refers to rtx_kernel.o(.text.osKernelGetInfo) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetInfo) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_kernel.o(.text.svcRtxKernelGetInfo) refers to rtx_kernel.o(.rodata.str1.4) for .L.str
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetInfo) refers to rtx_kernel.o(.text.svcRtxKernelGetInfo) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetState) refers to rtx_kernel.o(.text.svcRtxKernelGetState) for svcRtxKernelGetState
+    rtx_kernel.o(.text.osKernelGetState) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetState) refers to rtx_kernel.o(.text.osKernelGetState) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetState) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetState) refers to rtx_kernel.o(.text.svcRtxKernelGetState) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelStart) refers to rtx_kernel.o(.text.svcRtxKernelStart) for svcRtxKernelStart
+    rtx_kernel.o(.ARM.exidx.text.osKernelStart) refers to rtx_kernel.o(.text.osKernelStart) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelLock) refers to rtx_kernel.o(.text.svcRtxKernelLock) for svcRtxKernelLock
+    rtx_kernel.o(.ARM.exidx.text.osKernelLock) refers to rtx_kernel.o(.text.osKernelLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelUnlock) refers to rtx_kernel.o(.text.svcRtxKernelUnlock) for svcRtxKernelUnlock
+    rtx_kernel.o(.ARM.exidx.text.osKernelUnlock) refers to rtx_kernel.o(.text.osKernelUnlock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelRestoreLock) refers to rtx_kernel.o(.text.svcRtxKernelRestoreLock) for svcRtxKernelRestoreLock
+    rtx_kernel.o(.ARM.exidx.text.osKernelRestoreLock) refers to rtx_kernel.o(.text.osKernelRestoreLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelSuspend) refers to rtx_kernel.o(.text.svcRtxKernelSuspend) for svcRtxKernelSuspend
+    rtx_kernel.o(.ARM.exidx.text.osKernelSuspend) refers to rtx_kernel.o(.text.osKernelSuspend) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelResume) refers to rtx_kernel.o(.text.svcRtxKernelResume) for svcRtxKernelResume
+    rtx_kernel.o(.ARM.exidx.text.osKernelResume) refers to rtx_kernel.o(.text.osKernelResume) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetTickCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.text.osKernelGetTickCount) refers to rtx_kernel.o(.text.svcRtxKernelGetTickCount) for svcRtxKernelGetTickCount
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetTickCount) refers to rtx_kernel.o(.text.osKernelGetTickCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetTickCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickCount) refers to rtx_kernel.o(.text.svcRtxKernelGetTickCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetTickFreq) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.text.osKernelGetTickFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetTickFreq) for svcRtxKernelGetTickFreq
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetTickFreq) refers to rtx_kernel.o(.text.osKernelGetTickFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetTickFreq) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetTickFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetSysTimerCount) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) for svcRtxKernelGetSysTimerCount
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerCount) refers to rtx_kernel.o(.text.osKernelGetSysTimerCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to os_systick.o(.text.OS_Tick_GetCount) for OS_Tick_GetCount
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to os_systick.o(.text.OS_Tick_GetOverflow) for OS_Tick_GetOverflow
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to os_systick.o(.text.OS_Tick_GetInterval) for OS_Tick_GetInterval
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerCount) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount) for [Anonymous Symbol]
+    rtx_kernel.o(.text.osKernelGetSysTimerFreq) refers to os_systick.o(.text.OS_Tick_GetClock) for OS_Tick_GetClock
+    rtx_kernel.o(.text.osKernelGetSysTimerFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq) for svcRtxKernelGetSysTimerFreq
+    rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerFreq) refers to rtx_kernel.o(.text.osKernelGetSysTimerFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq) refers to os_systick.o(.text.OS_Tick_GetClock) for OS_Tick_GetClock
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerFreq) refers to rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_memory.o(.text.osRtxMemoryInit) for osRtxMemoryInit
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for osRtxMemoryPoolInit
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.text.svcRtxKernelInitialize) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelInitialize) refers to rtx_kernel.o(.text.svcRtxKernelInitialize) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_thread.o(.text.osRtxThreadStartup) for osRtxThreadStartup
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to os_systick.o(.text.OS_Tick_Setup) for OS_Tick_Setup
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to os_systick.o(.text.OS_Tick_GetIRQn) for OS_Tick_GetIRQn
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to os_systick.o(.text.OS_Tick_Enable) for OS_Tick_Enable
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_kernel.o(.text.svcRtxKernelStart) refers to irq_cm3.o(.text) for SysTick_Handler
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelStart) refers to rtx_kernel.o(.text.svcRtxKernelStart) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelLock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelLock) refers to rtx_kernel.o(.text.svcRtxKernelLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelUnlock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelUnlock) refers to rtx_kernel.o(.text.svcRtxKernelUnlock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelRestoreLock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelRestoreLock) refers to rtx_kernel.o(.text.svcRtxKernelRestoreLock) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelSuspend) refers to os_systick.o(.text.OS_Tick_Disable) for OS_Tick_Disable
+    rtx_kernel.o(.text.svcRtxKernelSuspend) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelSuspend) refers to rtx_kernel.o(.text.svcRtxKernelSuspend) for [Anonymous Symbol]
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_thread.o(.text.osRtxThreadDelayTick) for osRtxThreadDelayTick
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to os_systick.o(.text.OS_Tick_Enable) for OS_Tick_Enable
+    rtx_kernel.o(.text.svcRtxKernelResume) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_kernel.o(.ARM.exidx.text.svcRtxKernelResume) refers to rtx_kernel.o(.text.svcRtxKernelResume) for [Anonymous Symbol]
+    rtx_kernel.o(.data.os) refers to rtx_kernel.o(.rodata.str1.4) for .L.str
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListPut) refers to rtx_thread.o(.text.osRtxThreadListPut) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListGet) refers to rtx_thread.o(.text.osRtxThreadListGet) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadListSort) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.osRtxThreadListSort) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListSort) refers to rtx_thread.o(.text.osRtxThreadListSort) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListRemove) refers to rtx_thread.o(.text.osRtxThreadListRemove) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadReadyPut) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_thread.o(.text.osRtxThreadReadyPut) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadReadyPut) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.text.osRtxThreadDelayTick) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayTick) refers to rtx_thread.o(.text.osRtxThreadDelayTick) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadRegPtr) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadSwitch) refers to rtx_thread.o(.text.osRtxThreadStackCheck) for osRtxThreadStackCheck
+    rtx_thread.o(.text.osRtxThreadSwitch) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadSwitch) refers to rtx_thread.o(.text.osRtxThreadSwitch) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadStackCheck) refers to rtx_config.o(i.osRtxErrorNotify) for osRtxErrorNotify
+    rtx_thread.o(.text.osRtxThreadStackCheck) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadStackCheck) refers to rtx_thread.o(.text.osRtxThreadStackCheck) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadBlock) for osRtxThreadBlock
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_thread.o(.text.osRtxThreadDispatch) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDispatch) refers to rtx_thread.o(.text.osRtxThreadDispatch) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadBlock) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadBlock) refers to rtx_thread.o(.text.osRtxThreadBlock) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitExit) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDelayRemove) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayRemove) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadWaitEnter) refers to rtx_thread.o(.text.osRtxThreadDelayInsert) for osRtxThreadDelayInsert
+    rtx_thread.o(.text.osRtxThreadWaitEnter) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_thread.o(.text.osRtxThreadWaitEnter) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitEnter) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadDelayInsert) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayInsert) refers to rtx_thread.o(.text.osRtxThreadDelayInsert) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_thread.o(.text.svcRtxThreadNew) for svcRtxThreadNew
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_config.o(i.osRtxIdleThread) for osRtxIdleThread
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.text.osRtxThreadStartup) refers to rtx_timer.o(.text.osRtxTimerThread) for osRtxTimerThread
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadStartup) refers to rtx_thread.o(.text.osRtxThreadStartup) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_thread.o(.text.osThreadExit) for osThreadExit
+    rtx_thread.o(.text.svcRtxThreadNew) refers to rtx_thread.o(.text.osRtxThreadPostProcess) for osRtxThreadPostProcess
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadNew) refers to rtx_thread.o(.text.svcRtxThreadNew) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadNew) refers to rtx_thread.o(.text.svcRtxThreadNew) for svcRtxThreadNew
+    rtx_thread.o(.ARM.exidx.text.osThreadNew) refers to rtx_thread.o(.text.osThreadNew) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetName) refers to rtx_thread.o(.text.svcRtxThreadGetName) for svcRtxThreadGetName
+    rtx_thread.o(.ARM.exidx.text.osThreadGetName) refers to rtx_thread.o(.text.osThreadGetName) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetId) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.text.osThreadGetId) refers to rtx_thread.o(.text.svcRtxThreadGetId) for svcRtxThreadGetId
+    rtx_thread.o(.ARM.exidx.text.osThreadGetId) refers to rtx_thread.o(.text.osThreadGetId) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadGetId) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetId) refers to rtx_thread.o(.text.svcRtxThreadGetId) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetState) refers to rtx_thread.o(.text.svcRtxThreadGetState) for svcRtxThreadGetState
+    rtx_thread.o(.ARM.exidx.text.osThreadGetState) refers to rtx_thread.o(.text.osThreadGetState) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetStackSize) refers to rtx_thread.o(.text.svcRtxThreadGetStackSize) for svcRtxThreadGetStackSize
+    rtx_thread.o(.ARM.exidx.text.osThreadGetStackSize) refers to rtx_thread.o(.text.osThreadGetStackSize) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetStackSpace) refers to rtx_thread.o(.text.svcRtxThreadGetStackSpace) for svcRtxThreadGetStackSpace
+    rtx_thread.o(.ARM.exidx.text.osThreadGetStackSpace) refers to rtx_thread.o(.text.osThreadGetStackSpace) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadSetPriority) refers to rtx_thread.o(.text.svcRtxThreadSetPriority) for svcRtxThreadSetPriority
+    rtx_thread.o(.ARM.exidx.text.osThreadSetPriority) refers to rtx_thread.o(.text.osThreadSetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetPriority) refers to rtx_thread.o(.text.svcRtxThreadGetPriority) for svcRtxThreadGetPriority
+    rtx_thread.o(.ARM.exidx.text.osThreadGetPriority) refers to rtx_thread.o(.text.osThreadGetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadYield) refers to rtx_thread.o(.text.svcRtxThreadYield) for svcRtxThreadYield
+    rtx_thread.o(.ARM.exidx.text.osThreadYield) refers to rtx_thread.o(.text.osThreadYield) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadSuspend) refers to rtx_thread.o(.text.svcRtxThreadSuspend) for svcRtxThreadSuspend
+    rtx_thread.o(.ARM.exidx.text.osThreadSuspend) refers to rtx_thread.o(.text.osThreadSuspend) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadResume) refers to rtx_thread.o(.text.svcRtxThreadResume) for svcRtxThreadResume
+    rtx_thread.o(.ARM.exidx.text.osThreadResume) refers to rtx_thread.o(.text.osThreadResume) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadDetach) refers to rtx_thread.o(.text.svcRtxThreadDetach) for svcRtxThreadDetach
+    rtx_thread.o(.ARM.exidx.text.osThreadDetach) refers to rtx_thread.o(.text.osThreadDetach) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadJoin) refers to rtx_thread.o(.text.svcRtxThreadJoin) for svcRtxThreadJoin
+    rtx_thread.o(.ARM.exidx.text.osThreadJoin) refers to rtx_thread.o(.text.osThreadJoin) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadExit) refers to rtx_thread.o(.text.svcRtxThreadExit) for svcRtxThreadExit
+    rtx_thread.o(.ARM.exidx.text.osThreadExit) refers to rtx_thread.o(.text.osThreadExit) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadTerminate) refers to rtx_thread.o(.text.svcRtxThreadTerminate) for svcRtxThreadTerminate
+    rtx_thread.o(.ARM.exidx.text.osThreadTerminate) refers to rtx_thread.o(.text.osThreadTerminate) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadGetCount) refers to rtx_thread.o(.text.svcRtxThreadGetCount) for svcRtxThreadGetCount
+    rtx_thread.o(.ARM.exidx.text.osThreadGetCount) refers to rtx_thread.o(.text.osThreadGetCount) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadEnumerate) refers to rtx_thread.o(.text.svcRtxThreadEnumerate) for svcRtxThreadEnumerate
+    rtx_thread.o(.ARM.exidx.text.osThreadEnumerate) refers to rtx_thread.o(.text.osThreadEnumerate) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsSet) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_thread.o(.text.osThreadFlagsSet) refers to rtx_thread.o(.text.svcRtxThreadFlagsSet) for svcRtxThreadFlagsSet
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsSet) refers to rtx_thread.o(.text.osThreadFlagsSet) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsClear) refers to rtx_thread.o(.text.svcRtxThreadFlagsClear) for svcRtxThreadFlagsClear
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsClear) refers to rtx_thread.o(.text.osThreadFlagsClear) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsGet) refers to rtx_thread.o(.text.svcRtxThreadFlagsGet) for svcRtxThreadFlagsGet
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsGet) refers to rtx_thread.o(.text.osThreadFlagsGet) for [Anonymous Symbol]
+    rtx_thread.o(.text.osThreadFlagsWait) refers to rtx_thread.o(.text.svcRtxThreadFlagsWait) for svcRtxThreadFlagsWait
+    rtx_thread.o(.ARM.exidx.text.osThreadFlagsWait) refers to rtx_thread.o(.text.osThreadFlagsWait) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadPostProcess) refers to rtx_thread.o(.text.ThreadFlagsCheck) for ThreadFlagsCheck
+    rtx_thread.o(.text.osRtxThreadPostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadPostProcess) refers to rtx_thread.o(.text.osRtxThreadPostProcess) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.ThreadFlagsCheck) refers to rtx_thread.o(.text.ThreadFlagsCheck) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetName) refers to rtx_thread.o(.text.svcRtxThreadGetName) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetState) refers to rtx_thread.o(.text.svcRtxThreadGetState) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSize) refers to rtx_thread.o(.text.svcRtxThreadGetStackSize) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadGetStackSpace) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSpace) refers to rtx_thread.o(.text.svcRtxThreadGetStackSpace) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadSetPriority) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_thread.o(.text.svcRtxThreadSetPriority) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadSetPriority) refers to rtx_thread.o(.text.svcRtxThreadSetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetPriority) refers to rtx_thread.o(.text.svcRtxThreadGetPriority) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_thread.o(.text.svcRtxThreadYield) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadYield) refers to rtx_thread.o(.text.svcRtxThreadYield) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.osRtxThreadDelayInsert) for osRtxThreadDelayInsert
+    rtx_thread.o(.text.svcRtxThreadSuspend) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadSuspend) refers to rtx_thread.o(.text.svcRtxThreadSuspend) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadResume) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadResume) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.svcRtxThreadResume) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadResume) refers to rtx_thread.o(.text.svcRtxThreadResume) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadDetach) refers to rtx_thread.o(.text.osRtxThreadListUnlink) for osRtxThreadListUnlink
+    rtx_thread.o(.text.svcRtxThreadDetach) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadDetach) refers to rtx_thread.o(.text.svcRtxThreadDetach) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadListUnlink) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadListUnlink) refers to rtx_thread.o(.text.osRtxThreadListUnlink) for [Anonymous Symbol]
+    rtx_thread.o(.text.osRtxThreadFree) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_thread.o(.text.osRtxThreadFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_thread.o(.text.osRtxThreadFree) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.osRtxThreadFree) refers to rtx_thread.o(.text.osRtxThreadFree) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.osRtxThreadListUnlink) for osRtxThreadListUnlink
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_thread.o(.text.svcRtxThreadJoin) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadJoin) refers to rtx_thread.o(.text.svcRtxThreadJoin) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_mutex.o(.text.osRtxMutexOwnerRelease) for osRtxMutexOwnerRelease
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.text.svcRtxThreadExit) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadExit) refers to rtx_thread.o(.text.svcRtxThreadExit) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadDelayRemove) for osRtxThreadDelayRemove
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_mutex.o(.text.osRtxMutexOwnerRelease) for osRtxMutexOwnerRelease
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.osRtxThreadFree) for osRtxThreadFree
+    rtx_thread.o(.text.svcRtxThreadTerminate) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadTerminate) refers to rtx_thread.o(.text.svcRtxThreadTerminate) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadGetCount) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetCount) refers to rtx_thread.o(.text.svcRtxThreadGetCount) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadEnumerate) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadEnumerate) refers to rtx_thread.o(.text.svcRtxThreadEnumerate) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsSet) refers to rtx_thread.o(.text.ThreadFlagsCheck) for ThreadFlagsCheck
+    rtx_thread.o(.text.svcRtxThreadFlagsSet) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsSet) refers to rtx_thread.o(.text.svcRtxThreadFlagsSet) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsClear) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsClear) refers to rtx_thread.o(.text.svcRtxThreadFlagsClear) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsGet) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsGet) refers to rtx_thread.o(.text.svcRtxThreadFlagsGet) for [Anonymous Symbol]
+    rtx_thread.o(.text.svcRtxThreadFlagsWait) refers to rtx_thread.o(.text.ThreadFlagsCheck) for ThreadFlagsCheck
+    rtx_thread.o(.text.svcRtxThreadFlagsWait) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_thread.o(.text.svcRtxThreadFlagsWait) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsWait) refers to rtx_thread.o(.text.svcRtxThreadFlagsWait) for [Anonymous Symbol]
+    rtx_delay.o(.text.osDelay) refers to rtx_delay.o(.text.svcRtxDelay) for svcRtxDelay
+    rtx_delay.o(.ARM.exidx.text.osDelay) refers to rtx_delay.o(.text.osDelay) for [Anonymous Symbol]
+    rtx_delay.o(.text.osDelayUntil) refers to rtx_delay.o(.text.svcRtxDelayUntil) for svcRtxDelayUntil
+    rtx_delay.o(.ARM.exidx.text.osDelayUntil) refers to rtx_delay.o(.text.osDelayUntil) for [Anonymous Symbol]
+    rtx_delay.o(.text.svcRtxDelay) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_delay.o(.ARM.exidx.text.svcRtxDelay) refers to rtx_delay.o(.text.svcRtxDelay) for [Anonymous Symbol]
+    rtx_delay.o(.text.svcRtxDelayUntil) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_delay.o(.text.svcRtxDelayUntil) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_delay.o(.ARM.exidx.text.svcRtxDelayUntil) refers to rtx_delay.o(.text.svcRtxDelayUntil) for [Anonymous Symbol]
+    rtx_timer.o(.text.osRtxTimerThread) refers to rtx_msgqueue.o(.text.osMessageQueueNew) for osMessageQueueNew
+    rtx_timer.o(.text.osRtxTimerThread) refers to rtx_msgqueue.o(.text.osMessageQueueGet) for osMessageQueueGet
+    rtx_timer.o(.text.osRtxTimerThread) refers to rtx_lib.o(.rodata) for osRtxConfig
+    rtx_timer.o(.text.osRtxTimerThread) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.text.osRtxTimerThread) refers to rtx_timer.o(.text.osRtxTimerTick) for osRtxTimerTick
+    rtx_timer.o(.ARM.exidx.text.osRtxTimerThread) refers to rtx_timer.o(.text.osRtxTimerThread) for [Anonymous Symbol]
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_msgqueue.o(.text.osMessageQueuePut) for osMessageQueuePut
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_config.o(i.osRtxErrorNotify) for osRtxErrorNotify
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_timer.o(.text.TimerInsert) for TimerInsert
+    rtx_timer.o(.text.osRtxTimerTick) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.osRtxTimerTick) refers to rtx_timer.o(.text.osRtxTimerTick) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerNew) refers to rtx_timer.o(.text.svcRtxTimerNew) for svcRtxTimerNew
+    rtx_timer.o(.ARM.exidx.text.osTimerNew) refers to rtx_timer.o(.text.osTimerNew) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerGetName) refers to rtx_timer.o(.text.svcRtxTimerGetName) for svcRtxTimerGetName
+    rtx_timer.o(.ARM.exidx.text.osTimerGetName) refers to rtx_timer.o(.text.osTimerGetName) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerStart) refers to rtx_timer.o(.text.svcRtxTimerStart) for svcRtxTimerStart
+    rtx_timer.o(.ARM.exidx.text.osTimerStart) refers to rtx_timer.o(.text.osTimerStart) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerStop) refers to rtx_timer.o(.text.svcRtxTimerStop) for svcRtxTimerStop
+    rtx_timer.o(.ARM.exidx.text.osTimerStop) refers to rtx_timer.o(.text.osTimerStop) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerIsRunning) refers to rtx_timer.o(.text.svcRtxTimerIsRunning) for svcRtxTimerIsRunning
+    rtx_timer.o(.ARM.exidx.text.osTimerIsRunning) refers to rtx_timer.o(.text.osTimerIsRunning) for [Anonymous Symbol]
+    rtx_timer.o(.text.osTimerDelete) refers to rtx_timer.o(.text.svcRtxTimerDelete) for svcRtxTimerDelete
+    rtx_timer.o(.ARM.exidx.text.osTimerDelete) refers to rtx_timer.o(.text.osTimerDelete) for [Anonymous Symbol]
+    rtx_timer.o(.text.TimerInsert) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.TimerInsert) refers to rtx_timer.o(.text.TimerInsert) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_timer.o(.text.svcRtxTimerNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_timer.o(.text.svcRtxTimerNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerNew) refers to rtx_timer.o(.text.svcRtxTimerNew) for [Anonymous Symbol]
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerGetName) refers to rtx_timer.o(.text.svcRtxTimerGetName) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerStart) refers to rtx_timer.o(.text.TimerRemove) for TimerRemove
+    rtx_timer.o(.text.svcRtxTimerStart) refers to rtx_timer.o(.text.TimerInsert) for TimerInsert
+    rtx_timer.o(.text.svcRtxTimerStart) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerStart) refers to rtx_timer.o(.text.svcRtxTimerStart) for [Anonymous Symbol]
+    rtx_timer.o(.text.TimerRemove) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.TimerRemove) refers to rtx_timer.o(.text.TimerRemove) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerStop) refers to rtx_timer.o(.text.TimerRemove) for TimerRemove
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerStop) refers to rtx_timer.o(.text.svcRtxTimerStop) for [Anonymous Symbol]
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerIsRunning) refers to rtx_timer.o(.text.svcRtxTimerIsRunning) for [Anonymous Symbol]
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_timer.o(.text.TimerRemove) for TimerRemove
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_timer.o(.text.svcRtxTimerDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_timer.o(.ARM.exidx.text.svcRtxTimerDelete) refers to rtx_timer.o(.text.svcRtxTimerDelete) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osRtxMutexOwnerRelease) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mutex.o(.text.osRtxMutexOwnerRelease) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mutex.o(.ARM.exidx.text.osRtxMutexOwnerRelease) refers to rtx_mutex.o(.text.osRtxMutexOwnerRelease) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexNew) refers to rtx_mutex.o(.text.svcRtxMutexNew) for svcRtxMutexNew
+    rtx_mutex.o(.ARM.exidx.text.osMutexNew) refers to rtx_mutex.o(.text.osMutexNew) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexGetName) refers to rtx_mutex.o(.text.svcRtxMutexGetName) for svcRtxMutexGetName
+    rtx_mutex.o(.ARM.exidx.text.osMutexGetName) refers to rtx_mutex.o(.text.osMutexGetName) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexAcquire) refers to rtx_mutex.o(.text.svcRtxMutexAcquire) for svcRtxMutexAcquire
+    rtx_mutex.o(.ARM.exidx.text.osMutexAcquire) refers to rtx_mutex.o(.text.osMutexAcquire) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexRelease) refers to rtx_mutex.o(.text.svcRtxMutexRelease) for svcRtxMutexRelease
+    rtx_mutex.o(.ARM.exidx.text.osMutexRelease) refers to rtx_mutex.o(.text.osMutexRelease) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexGetOwner) refers to rtx_mutex.o(.text.svcRtxMutexGetOwner) for svcRtxMutexGetOwner
+    rtx_mutex.o(.ARM.exidx.text.osMutexGetOwner) refers to rtx_mutex.o(.text.osMutexGetOwner) for [Anonymous Symbol]
+    rtx_mutex.o(.text.osMutexDelete) refers to rtx_mutex.o(.text.svcRtxMutexDelete) for svcRtxMutexDelete
+    rtx_mutex.o(.ARM.exidx.text.osMutexDelete) refers to rtx_mutex.o(.text.osMutexDelete) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    rtx_mutex.o(.text.svcRtxMutexNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexNew) refers to rtx_mutex.o(.text.svcRtxMutexNew) for [Anonymous Symbol]
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetName) refers to rtx_mutex.o(.text.svcRtxMutexGetName) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_mutex.o(.text.svcRtxMutexAcquire) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexAcquire) refers to rtx_mutex.o(.text.svcRtxMutexAcquire) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_mutex.o(.text.svcRtxMutexRelease) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexRelease) refers to rtx_mutex.o(.text.svcRtxMutexRelease) for [Anonymous Symbol]
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetOwner) refers to rtx_mutex.o(.text.svcRtxMutexGetOwner) for [Anonymous Symbol]
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadListSort) for osRtxThreadListSort
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_mutex.o(.text.svcRtxMutexDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mutex.o(.ARM.exidx.text.svcRtxMutexDelete) refers to rtx_mutex.o(.text.svcRtxMutexDelete) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osSemaphoreNew) refers to rtx_semaphore.o(.text.svcRtxSemaphoreNew) for svcRtxSemaphoreNew
+    rtx_semaphore.o(.ARM.exidx.text.osSemaphoreNew) refers to rtx_semaphore.o(.text.osSemaphoreNew) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osSemaphoreGetName) refers to rtx_semaphore.o(.text.svcRtxSemaphoreGetName) for svcRtxSemaphoreGetName
+    rtx_semaphore.o(.ARM.exidx.text.osSemaphoreGetName) refers to rtx_semaphore.o(.text.osSemaphoreGetName) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osSemaphoreAcquire) refers to rtx_semaphore.o(.text.svcRtxSemaphoreAcquire) for svcRtxSemaphoreAcquire
+    rtx_semaphore.o(.ARM.exidx.text.osSemaphoreAcquire) refers to rtx_semaphore.o(.text.osSemaphoreAcquire) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osSemaphoreRelease) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_semaphore.o(.text.osSemaphoreRelease) refers to rtx_semaphore.o(.text.svcRtxSemaphoreRelease) for svcRtxSemaphoreRelease
+    rtx_semaphore.o(.ARM.exidx.text.osSemaphoreRelease) refers to rtx_semaphore.o(.text.osSemaphoreRelease) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osSemaphoreGetCount) refers to rtx_semaphore.o(.text.svcRtxSemaphoreGetCount) for svcRtxSemaphoreGetCount
+    rtx_semaphore.o(.ARM.exidx.text.osSemaphoreGetCount) refers to rtx_semaphore.o(.text.osSemaphoreGetCount) for [Anonymous Symbol]
+    rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreGetCount) refers to rtx_semaphore.o(.text.svcRtxSemaphoreGetCount) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osSemaphoreDelete) refers to rtx_semaphore.o(.text.svcRtxSemaphoreDelete) for svcRtxSemaphoreDelete
+    rtx_semaphore.o(.ARM.exidx.text.osSemaphoreDelete) refers to rtx_semaphore.o(.text.osSemaphoreDelete) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.svcRtxSemaphoreNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_semaphore.o(.text.svcRtxSemaphoreNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_semaphore.o(.text.svcRtxSemaphoreNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_semaphore.o(.text.svcRtxSemaphoreNew) refers to rtx_semaphore.o(.text.osRtxSemaphorePostProcess) for osRtxSemaphorePostProcess
+    rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreNew) refers to rtx_semaphore.o(.text.svcRtxSemaphoreNew) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.osRtxSemaphorePostProcess) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_semaphore.o(.text.osRtxSemaphorePostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_semaphore.o(.ARM.exidx.text.osRtxSemaphorePostProcess) refers to rtx_semaphore.o(.text.osRtxSemaphorePostProcess) for [Anonymous Symbol]
+    rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreGetName) refers to rtx_semaphore.o(.text.svcRtxSemaphoreGetName) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.svcRtxSemaphoreAcquire) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_semaphore.o(.text.svcRtxSemaphoreAcquire) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_semaphore.o(.text.svcRtxSemaphoreAcquire) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreAcquire) refers to rtx_semaphore.o(.text.svcRtxSemaphoreAcquire) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.svcRtxSemaphoreRelease) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_semaphore.o(.text.svcRtxSemaphoreRelease) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreRelease) refers to rtx_semaphore.o(.text.svcRtxSemaphoreRelease) for [Anonymous Symbol]
+    rtx_semaphore.o(.text.svcRtxSemaphoreDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_semaphore.o(.text.svcRtxSemaphoreDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_semaphore.o(.text.svcRtxSemaphoreDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_semaphore.o(.text.svcRtxSemaphoreDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_semaphore.o(.text.svcRtxSemaphoreDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_semaphore.o(.text.svcRtxSemaphoreDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreDelete) refers to rtx_semaphore.o(.text.svcRtxSemaphoreDelete) for [Anonymous Symbol]
+    irq_cm3.o(.text) refers to rtx_system.o(.text.osRtxPendSV_Handler) for osRtxPendSV_Handler
+    irq_cm3.o(.text) refers to rtx_system.o(.text.osRtxTick_Handler) for osRtxTick_Handler
+    irq_cm3.o(.text) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    irq_cm3.o(.text) refers to rtx_lib.o(.constdata) for osRtxUserSVC
+    usbd_lib_core.o(i.USBD0_Core_Thread) refers to usbd_lib_core.o(i.USBD_Core_Thread) for USBD_Core_Thread
+    usbd_lib_core.o(i.USBD1_Core_Thread) refers to usbd_lib_core.o(i.USBD_Core_Thread) for USBD_Core_Thread
+    usbd_lib_core.o(i.USBD2_Core_Thread) refers to usbd_lib_core.o(i.USBD_Core_Thread) for USBD_Core_Thread
+    usbd_lib_core.o(i.USBD3_Core_Thread) refers to usbd_lib_core.o(i.USBD_Core_Thread) for USBD_Core_Thread
+    usbd_lib_core.o(i.USBD_CheckDevice) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_Configured) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_Configured) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_Connect) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_Connect) refers to usbd_lib_drv.o(i.USBD_DriverDeviceConnect) for USBD_DriverDeviceConnect
+    usbd_lib_core.o(i.USBD_Core) refers to usbd_lib_core.o(i.USBD_ResetCore) for USBD_ResetCore
+    usbd_lib_core.o(i.USBD_Core) refers to usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) for USBD_DriverEndpointConfigure
+    usbd_lib_core.o(i.USBD_Core) refers to usbd_config_0.o(i.USBD_Reset) for USBD_Reset
+    usbd_lib_core.o(i.USBD_Core) refers to usbd_lib_core.o(i.USBD_Endpoint0) for USBD_Endpoint0
+    usbd_lib_core.o(i.USBD_Core) refers to usbd_config_0.o(.constdata) for fpUSBD_Device_VbusChanged
+    usbd_lib_core.o(i.USBD_Core) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_core.o(i.USBD_Core_Thread) refers to usbd_config_0.o(i.USBD_ThreadFlagsWait) for USBD_ThreadFlagsWait
+    usbd_lib_core.o(i.USBD_Core_Thread) refers to usbd_lib_core.o(i.USBD_Core) for USBD_Core
+    usbd_lib_core.o(i.USBD_Core_Thread) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_Core_Thread) refers to usbd_config_0.o(.data) for usbd_capabilities
+    usbd_lib_core.o(i.USBD_DataInStage) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_core.o(i.USBD_DataInStage) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_DataOutStage) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_core.o(i.USBD_DataOutStage) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_Disconnect) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_Disconnect) refers to usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect) for USBD_DriverDeviceDisconnect
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_DataInStage) for USBD_DataInStage
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core_device.o(i.USBD_Core_Endpoint0_InDataSent) for USBD_Core_Endpoint0_InDataSent
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_drv.o(i.USBD_DriverEndpointStall) for USBD_DriverEndpointStall
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_StatusOutStage) for USBD_StatusOutStage
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_StatusInStageDone) for USBD_StatusInStageDone
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress) for USBD_DriverDeviceSetAddress
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_DataOutStage) for USBD_DataOutStage
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core_device.o(i.USBD_Core_Endpoint0_OutDataReceived) for USBD_Core_Endpoint0_OutDataReceived
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_StatusInStage) for USBD_StatusInStage
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Out_HID_ReqToIF) for USBD_Endpoint0_Out_HID_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Out_ADC_ReqToIF) for USBD_Endpoint0_Out_ADC_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Out_CDC_ReqToIF) for USBD_Endpoint0_Out_CDC_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Out_ADC_ReqToEP) for USBD_Endpoint0_Out_ADC_ReqToEP
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_StatusOutStageDone) for USBD_StatusOutStageDone
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_drv.o(i.USBD_DriverReadSetupPacket) for USBD_DriverReadSetupPacket
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketReceived) for USBD_Core_Endpoint0_SetupPacketReceived
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_ReqGetStatus) for USBD_ReqGetStatus
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketProcessed) for USBD_Core_Endpoint0_SetupPacketProcessed
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_ReqSetClrFeature) for USBD_ReqSetClrFeature
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_ReqGetDescriptor) for USBD_ReqGetDescriptor
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_ReqSetConfiguration) for USBD_ReqSetConfiguration
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_ReqSetInterface) for USBD_ReqSetInterface
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Setup_HID_ReqToIF) for USBD_Endpoint0_Setup_HID_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) for USBD_Endpoint0_Setup_MSC_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Setup_ADC_ReqToIF) for USBD_Endpoint0_Setup_ADC_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Setup_CDC_ReqToIF) for USBD_Endpoint0_Setup_CDC_ReqToIF
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(i.USBD_Endpoint0_Setup_ADC_ReqToEP) for USBD_Endpoint0_Setup_ADC_ReqToEP
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_lib_core.o(i.USBD_ReqGetMSDescriptor) for USBD_ReqGetMSDescriptor
+    usbd_lib_core.o(i.USBD_Endpoint0) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_EndpointAbort) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_EndpointAbort) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_EndpointRead) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_EndpointRead) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_core.o(i.USBD_EndpointReadGetResult) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_EndpointReadGetResult) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) for USBD_DriverEndpointTransferGetResult
+    usbd_lib_core.o(i.USBD_EndpointStall) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_EndpointStall) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_EndpointStall) refers to usbd_lib_drv.o(i.USBD_DriverEndpointStall) for USBD_DriverEndpointStall
+    usbd_lib_core.o(i.USBD_EndpointStall) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_EndpointWrite) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_EndpointWrite) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_core.o(i.USBD_EndpointWriteGetResult) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_EndpointWriteGetResult) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) for USBD_DriverEndpointTransferGetResult
+    usbd_lib_core.o(i.USBD_GetState) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_GetState) refers to usbd_lib_drv.o(i.USBD_DriverDeviceGetState) for USBD_DriverDeviceGetState
+    usbd_lib_core.o(i.USBD_GetVersion) refers to usb_lib_ver.o(__MW_USB_LIB_VERSION_6.13.7) for usb_lib_version
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_lib_drv.o(i.USBD_DriverGetVersion) for USBD_DriverGetVersion
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_lib_drv.o(i.USBD_DriverGetCapabilities) for USBD_DriverGetCapabilities
+    usbd_lib_core.o(i.USBD_Initialize) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(i.USBD_SemaphoreCreate) for USBD_SemaphoreCreate
+    usbd_lib_core.o(i.USBD_Initialize) refers to rt_memclr.o(.text) for __aeabi_memclr
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(i.USBD_ClassInitialize) for USBD_ClassInitialize
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(i.USBD_ThreadCreate) for USBD_ThreadCreate
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_lib_drv.o(i.USBD_DriverInitialize) for USBD_DriverInitialize
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_lib_drv.o(i.USBD_DriverPowerControl) for USBD_DriverPowerControl
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(i.USBD_ThreadTerminate) for USBD_ThreadTerminate
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(i.USBD_ClassUninitialize) for USBD_ClassUninitialize
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(i.USBD_SemaphoreDelete) for USBD_SemaphoreDelete
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(.data) for usbd_drv_version
+    usbd_lib_core.o(i.USBD_Initialize) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_core.o(i.USBD_ReqGetDescriptor) refers to usbd_config_0.o(i.USBD_Endpoint0_ReqGetDescriptor_HID) for USBD_Endpoint0_ReqGetDescriptor_HID
+    usbd_lib_core.o(i.USBD_ReqGetDescriptor) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_ReqGetDescriptor) refers to usbd_lib_core.o(.data) for .data
+    usbd_lib_core.o(i.USBD_ReqGetDescriptor) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_core.o(i.USBD_ReqGetMSDescriptor) refers to usbd_config_0.o(i.USBD_Endpoint0_ReqGetExtProp_CC) for USBD_Endpoint0_ReqGetExtProp_CC
+    usbd_lib_core.o(i.USBD_ReqGetMSDescriptor) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_ReqGetMSDescriptor) refers to usbd_lib_core.o(.data) for .data
+    usbd_lib_core.o(i.USBD_ReqGetMSDescriptor) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_core.o(i.USBD_ReqGetStatus) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_ReqSetClrFeature) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_ReqSetClrFeature) refers to usbd_lib_drv.o(i.USBD_DriverEndpointStall) for USBD_DriverEndpointStall
+    usbd_lib_core.o(i.USBD_ReqSetClrFeature) refers to usbd_config_0.o(i.USBD_EndpointStop) for USBD_EndpointStop
+    usbd_lib_core.o(i.USBD_ReqSetClrFeature) refers to usbd_lib_core_msc.o(i.USBD_Endpoint0_ClearFeatureStall_MSC) for USBD_Endpoint0_ClearFeatureStall_MSC
+    usbd_lib_core.o(i.USBD_ReqSetClrFeature) refers to usbd_config_0.o(i.USBD_EndpointStart) for USBD_EndpointStart
+    usbd_lib_core.o(i.USBD_ReqSetClrFeature) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) for USBD_DriverEndpointUnconfigure
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_config_0.o(i.USBD_EndpointStop) for USBD_EndpointStop
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) for USBD_DriverEndpointConfigure
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_config_0.o(i.USBD_EndpointStart) for USBD_EndpointStart
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_config_0.o(i.USBD_SetConfiguration) for USBD_SetConfiguration
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_ReqSetConfiguration) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) for USBD_DriverEndpointConfigure
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_config_0.o(i.USBD_EndpointStart) for USBD_EndpointStart
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) for USBD_DriverEndpointUnconfigure
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_config_0.o(i.USBD_EndpointStop) for USBD_EndpointStop
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core.o(i.USBD_ReqSetInterface) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_core.o(i.USBD_ResetCore) refers to rt_memclr.o(.text) for __aeabi_memclr
+    usbd_lib_core.o(i.USBD_ResetCore) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_SetSerialNumber) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_SetSerialNumber) refers to strlen.o(.text) for strlen
+    usbd_lib_core.o(i.USBD_SetSerialNumber) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_SetSerialNumber) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_core.o(i.USBD_StatusInStage) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_core.o(i.USBD_StatusInStageDone) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) for USBD_DriverEndpointTransferGetResult
+    usbd_lib_core.o(i.USBD_StatusOutStage) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_core.o(i.USBD_StatusOutStageDone) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) for USBD_DriverEndpointTransferGetResult
+    usbd_lib_core.o(i.USBD_StatusOutStageDone) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_StatusOutStageDone) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_lib_core.o(i.USBD_CheckDevice) for USBD_CheckDevice
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(i.USBD_EndpointStop) for USBD_EndpointStop
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) for USBD_DriverEndpointUnconfigure
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_lib_drv.o(i.USBD_DriverPowerControl) for USBD_DriverPowerControl
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_lib_drv.o(i.USBD_DriverUninitialize) for USBD_DriverUninitialize
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(i.USBD_ThreadTerminate) for USBD_ThreadTerminate
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(i.USBD_ClassUninitialize) for USBD_ClassUninitialize
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(i.USBD_SemaphoreDelete) for USBD_SemaphoreDelete
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(.data) for usbd_core_thread_id
+    usbd_lib_core.o(i.USBD_Uninitialize) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverDeviceConnect) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverDeviceConnect) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverDeviceConnect) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverDeviceConnect) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverDeviceConnect) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverDeviceGetState) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverDeviceRemoteWakeup) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverDeviceRemoteWakeup) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverDeviceRemoteWakeup) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverDeviceRemoteWakeup) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverDeviceRemoteWakeup) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) refers to usbd_config_0.o(.constdata) for usbd_ep_max_num
+    usbd_lib_drv.o(i.USBD_DriverEndpointConfigure) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverEndpointStall) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_drv.o(i.USBD_DriverEndpointStall) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverEndpointStall) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverEndpointStall) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverEndpointStall) refers to usbd_config_0.o(.constdata) for usbd_ep_max_num
+    usbd_lib_drv.o(i.USBD_DriverEndpointStall) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) refers to usbd_config_0.o(.constdata) for usbd_ep_max_num
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) refers to usbd_config_0.o(.constdata) for usbd_ep_max_num
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) refers to usbd_config_0.o(.constdata) for usbd_ep_max_num
+    usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) refers to usbd_config_0.o(.constdata) for usbd_ep_max_num
+    usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure) refers to usbd_config_0.o(.bss) for usbd_driver_ep_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverGetCapabilities) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverGetFrameNumber) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverGetFrameNumber) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverGetFrameNumber) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverGetFrameNumber) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverGetFrameNumber) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverGetVersion) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverInitialize) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverInitialize) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverInitialize) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverInitialize) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverInitialize) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverPowerControl) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverPowerControl) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverPowerControl) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverPowerControl) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverPowerControl) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverReadSetupPacket) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverReadSetupPacket) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverReadSetupPacket) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverReadSetupPacket) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverReadSetupPacket) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_DriverUninitialize) refers to usbd_config_0.o(i.USBD_SemaphoreAcquire) for USBD_SemaphoreAcquire
+    usbd_lib_drv.o(i.USBD_DriverUninitialize) refers to usbd_config_0.o(i.USBD_Delay) for USBD_Delay
+    usbd_lib_drv.o(i.USBD_DriverUninitialize) refers to usbd_config_0.o(i.USBD_SemaphoreRelease) for USBD_SemaphoreRelease
+    usbd_lib_drv.o(i.USBD_DriverUninitialize) refers to usbd_config_0.o(.data) for usbd_driver_semaphore_id
+    usbd_lib_drv.o(i.USBD_DriverUninitialize) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_SignalDeviceEvent) refers to usbd_config_0.o(i.USBD_ThreadFlagsSet) for USBD_ThreadFlagsSet
+    usbd_lib_drv.o(i.USBD_SignalDeviceEvent) refers to usbd_config_0.o(.data) for usbd_core_thread_id
+    usbd_lib_drv.o(i.USBD_SignalEndpointEvent) refers to usbd_config_0.o(i.USBD_ThreadFlagsSet) for USBD_ThreadFlagsSet
+    usbd_lib_drv.o(i.USBD_SignalEndpointEvent) refers to usbd_config_0.o(.constdata) for usbd_dev_ptr
+    usbd_lib_drv.o(i.USBD_SignalEndpointEvent) refers to usbd_config_0.o(.data) for usbd_ep_thread_id_ptr
+    usbd_lib_msc.o(i.USBD_MSC0_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_Thread) for USBD_MSC_Thread
+    usbd_lib_msc.o(i.USBD_MSC1_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_Thread) for USBD_MSC_Thread
+    usbd_lib_msc.o(i.USBD_MSC2_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_Thread) for USBD_MSC_Thread
+    usbd_lib_msc.o(i.USBD_MSC3_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_Thread) for USBD_MSC_Thread
+    usbd_lib_msc.o(i.USBD_MSC_BulkOnlyMassStorageReset) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_BulkOnlyMassStorageReset) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataOut) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataOut) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_CheckCommandNoData) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_CheckCommandNoData) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_CheckInstance) refers to usbd_config_0.o(.constdata) for usbd_msc_num
+    usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_EndpointClearFeatureStall) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_EndpointClearFeatureStall) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_EndpointClearFeatureStall) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_EndpointStart) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_EndpointStart) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_EndpointStart) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_EpBulkIn) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_EpBulkIn) refers to usbd_lib_msc.o(i.USBD_MSC_MemoryRead) for USBD_MSC_MemoryRead
+    usbd_lib_msc.o(i.USBD_MSC_EpBulkIn) refers to usbd_lib_msc.o(i.USBD_MSC_SetCSW) for USBD_MSC_SetCSW
+    usbd_lib_msc.o(i.USBD_MSC_EpBulkIn) refers to usbd_lib_msc.o(i.USBD_MSC_SetStallEP) for USBD_MSC_SetStallEP
+    usbd_lib_msc.o(i.USBD_MSC_EpBulkIn) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandNoData) for USBD_MSC_CheckCommandNoData
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) for USBD_MSC_CheckMediaHW
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_RequestSense) for USBD_MSC_RequestSense
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_Inquiry) for USBD_MSC_Inquiry
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_StartStopUnit) for USBD_MSC_StartStopUnit
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) for USBD_MSC_CheckCommandDataIn
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) for USBD_MSC_DataInTransfer
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) for USBD_MSC_ReadFormatCapacity
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) for USBD_MSC_ReadCapacity
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_RW_Setup) for USBD_MSC_RW_Setup
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_MemoryRead) for USBD_MSC_MemoryRead
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_StatusPassed) for USBD_MSC_StatusPassed
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_lib_msc.o(i.USBD_MSC_StatusPhaseError) for USBD_MSC_StatusPhaseError
+    usbd_lib_msc.o(i.USBD_MSC_GetCBW) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_GetMaxLUN) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_GetMaxLUN) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Initialize) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_Initialize) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    usbd_lib_msc.o(i.USBD_MSC_Initialize) refers to usbd_config_0.o(i.USBD_ThreadCreate) for USBD_ThreadCreate
+    usbd_lib_msc.o(i.USBD_MSC_Initialize) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Initialize) refers to usbd_lib_msc.o(.data) for .data
+    usbd_lib_msc.o(i.USBD_MSC_Initialize) refers to usbd_config_0.o(.data) for usbd_msc_thread_id
+    usbd_lib_msc.o(i.USBD_MSC_Inquiry) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) for USBD_MSC_CheckCommandDataIn
+    usbd_lib_msc.o(i.USBD_MSC_Inquiry) refers to aeabi_memset.o(.text) for __aeabi_memset
+    usbd_lib_msc.o(i.USBD_MSC_Inquiry) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_Inquiry) refers to usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) for USBD_MSC_DataInTransfer
+    usbd_lib_msc.o(i.USBD_MSC_Inquiry) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Inquiry) refers to usbd_config_0.o(.data) for usbd_desc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_MemoryRead) refers to usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) for USBD_MSC_CheckMediaHW
+    usbd_lib_msc.o(i.USBD_MSC_MemoryRead) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_MemoryRead) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_MemoryRead) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_MemoryWrite) refers to usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) for USBD_MSC_CheckMediaHW
+    usbd_lib_msc.o(i.USBD_MSC_MemoryWrite) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_MemoryWrite) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_MemoryWrite) refers to usbd_lib_msc.o(i.USBD_MSC_StatusPassed) for USBD_MSC_StatusPassed
+    usbd_lib_msc.o(i.USBD_MSC_MemoryWrite) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_RW_Setup) refers to usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) for USBD_MSC_CheckMediaHW
+    usbd_lib_msc.o(i.USBD_MSC_RW_Setup) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataOut) for USBD_MSC_CheckCommandDataOut
+    usbd_lib_msc.o(i.USBD_MSC_RW_Setup) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) for USBD_MSC_CheckCommandDataIn
+    usbd_lib_msc.o(i.USBD_MSC_RW_Setup) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_RW_Setup) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) for USBD_MSC_CheckCommandDataIn
+    usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) for USBD_MSC_CheckMediaHW
+    usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) for USBD_MSC_DataInTransfer
+    usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_ReadCapacity) refers to usbd_lib_msc.o(.data) for .data
+    usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) for USBD_MSC_CheckCommandDataIn
+    usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW) for USBD_MSC_CheckMediaHW
+    usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) for USBD_MSC_DataInTransfer
+    usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity) refers to usbd_lib_msc.o(.data) for .data
+    usbd_lib_msc.o(i.USBD_MSC_RequestSense) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn) for USBD_MSC_CheckCommandDataIn
+    usbd_lib_msc.o(i.USBD_MSC_RequestSense) refers to rt_memclr.o(.text) for __aeabi_memclr
+    usbd_lib_msc.o(i.USBD_MSC_RequestSense) refers to usbd_lib_msc.o(i.USBD_MSC_DataInTransfer) for USBD_MSC_DataInTransfer
+    usbd_lib_msc.o(i.USBD_MSC_RequestSense) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Reset) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_Reset) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort) for USBD_DriverEndpointTransferAbort
+    usbd_lib_msc.o(i.USBD_MSC_Reset) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    usbd_lib_msc.o(i.USBD_MSC_Reset) refers to rt_memclr.o(.text) for __aeabi_memclr
+    usbd_lib_msc.o(i.USBD_MSC_Reset) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_SetCSW) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransfer) for USBD_DriverEndpointTransfer
+    usbd_lib_msc.o(i.USBD_MSC_SetCSW) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_SetStallEP) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_SetStallEP) refers to usbd_lib_drv.o(i.USBD_DriverEndpointStall) for USBD_DriverEndpointStall
+    usbd_lib_msc.o(i.USBD_MSC_SetStallEP) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_StartStopUnit) refers to usbd_lib_msc.o(i.USBD_MSC_CheckCommandNoData) for USBD_MSC_CheckCommandNoData
+    usbd_lib_msc.o(i.USBD_MSC_StartStopUnit) refers to usbd_lib_msc.o(i.USBD_MSC_StatusFailed) for USBD_MSC_StatusFailed
+    usbd_lib_msc.o(i.USBD_MSC_StartStopUnit) refers to usbd_lib_msc.o(i.USBD_MSC_StatusPassed) for USBD_MSC_StatusPassed
+    usbd_lib_msc.o(i.USBD_MSC_StartStopUnit) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_StatusFailed) refers to usbd_lib_msc.o(i.USBD_MSC_SetStallEP) for USBD_MSC_SetStallEP
+    usbd_lib_msc.o(i.USBD_MSC_StatusFailed) refers to usbd_lib_msc.o(i.USBD_MSC_SetCSW) for USBD_MSC_SetCSW
+    usbd_lib_msc.o(i.USBD_MSC_StatusFailed) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_StatusPassed) refers to usbd_lib_msc.o(i.USBD_MSC_SetCSW) for USBD_MSC_SetCSW
+    usbd_lib_msc.o(i.USBD_MSC_StatusPassed) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_StatusPhaseError) refers to usbd_lib_msc.o(i.USBD_MSC_SetStallEP) for USBD_MSC_SetStallEP
+    usbd_lib_msc.o(i.USBD_MSC_StatusPhaseError) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_config_0.o(i.USBD_ThreadFlagsWait) for USBD_ThreadFlagsWait
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult) for USBD_DriverEndpointTransferGetResult
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_StatusPhaseError) for USBD_MSC_StatusPhaseError
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_EpBulkIn) for USBD_MSC_EpBulkIn
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_GetCBW) for USBD_MSC_GetCBW
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_lib_msc.o(i.USBD_MSC_MemoryWrite) for USBD_MSC_MemoryWrite
+    usbd_lib_msc.o(i.USBD_MSC_Thread) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Uninitialize) refers to usbd_lib_msc.o(i.USBD_MSC_CheckInstance) for USBD_MSC_CheckInstance
+    usbd_lib_msc.o(i.USBD_MSC_Uninitialize) refers to usbd_config_0.o(i.USBD_ThreadTerminate) for USBD_ThreadTerminate
+    usbd_lib_msc.o(i.USBD_MSC_Uninitialize) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_msc.o(i.USBD_MSC_Uninitialize) refers to usbd_config_0.o(.data) for usbd_msc_thread_id
+    rtx_memory.o(.ARM.exidx.text.osRtxMemoryInit) refers to rtx_memory.o(.text.osRtxMemoryInit) for [Anonymous Symbol]
+    rtx_memory.o(.ARM.exidx.text.osRtxMemoryAlloc) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for [Anonymous Symbol]
+    rtx_memory.o(.ARM.exidx.text.osRtxMemoryFree) refers to rtx_memory.o(.text.osRtxMemoryFree) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolInit) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolAlloc) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolNew) refers to rtx_mempool.o(.text.svcRtxMemoryPoolNew) for svcRtxMemoryPoolNew
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolNew) refers to rtx_mempool.o(.text.osMemoryPoolNew) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetName) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetName) for svcRtxMemoryPoolGetName
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetName) refers to rtx_mempool.o(.text.osMemoryPoolGetName) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolAlloc) refers to rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) for svcRtxMemoryPoolAlloc
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolAlloc) refers to rtx_mempool.o(.text.osMemoryPoolAlloc) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.osMemoryPoolFree) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_mempool.o(.text.osMemoryPoolFree) refers to rtx_mempool.o(.text.svcRtxMemoryPoolFree) for svcRtxMemoryPoolFree
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolFree) refers to rtx_mempool.o(.text.osMemoryPoolFree) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetCapacity) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCapacity) for svcRtxMemoryPoolGetCapacity
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCapacity) refers to rtx_mempool.o(.text.osMemoryPoolGetCapacity) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCapacity) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCapacity) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetBlockSize) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetBlockSize) for svcRtxMemoryPoolGetBlockSize
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetBlockSize) refers to rtx_mempool.o(.text.osMemoryPoolGetBlockSize) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetBlockSize) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetBlockSize) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetCount) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCount) for svcRtxMemoryPoolGetCount
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCount) refers to rtx_mempool.o(.text.osMemoryPoolGetCount) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCount) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetCount) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolGetSpace) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetSpace) for svcRtxMemoryPoolGetSpace
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetSpace) refers to rtx_mempool.o(.text.osMemoryPoolGetSpace) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetSpace) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetSpace) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osMemoryPoolDelete) refers to rtx_mempool.o(.text.svcRtxMemoryPoolDelete) for svcRtxMemoryPoolDelete
+    rtx_mempool.o(.ARM.exidx.text.osMemoryPoolDelete) refers to rtx_mempool.o(.text.osMemoryPoolDelete) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rt_memclr.o(.text) for __aeabi_memclr
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for osRtxMemoryPoolInit
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mempool.o(.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) for osRtxMemoryPoolPostProcess
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolNew) refers to rtx_mempool.o(.text.svcRtxMemoryPoolNew) for [Anonymous Symbol]
+    rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolPostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolPostProcess) for [Anonymous Symbol]
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetName) refers to rtx_mempool.o(.text.svcRtxMemoryPoolGetName) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolAlloc) refers to rtx_mempool.o(.text.svcRtxMemoryPoolAlloc) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mempool.o(.text.svcRtxMemoryPoolFree) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolFree) refers to rtx_mempool.o(.text.svcRtxMemoryPoolFree) for [Anonymous Symbol]
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_mempool.o(.text.svcRtxMemoryPoolDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolDelete) refers to rtx_mempool.o(.text.svcRtxMemoryPoolDelete) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueNew) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueNew) for svcRtxMessageQueueNew
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueNew) refers to rtx_msgqueue.o(.text.osMessageQueueNew) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetName) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetName) for svcRtxMessageQueueGetName
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetName) refers to rtx_msgqueue.o(.text.osMessageQueueGetName) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_msgqueue.o(.text.osMessageQueuePut) refers to rtx_msgqueue.o(.text.svcRtxMessageQueuePut) for svcRtxMessageQueuePut
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueuePut) refers to rtx_msgqueue.o(.text.osMessageQueuePut) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueGet) for MessageQueueGet
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rtx_system.o(.text.osRtxPostProcess) for osRtxPostProcess
+    rtx_msgqueue.o(.text.osMessageQueueGet) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGet) for svcRtxMessageQueueGet
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGet) refers to rtx_msgqueue.o(.text.osMessageQueueGet) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetCapacity) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCapacity) for svcRtxMessageQueueGetCapacity
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCapacity) refers to rtx_msgqueue.o(.text.osMessageQueueGetCapacity) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCapacity) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCapacity) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetMsgSize) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetMsgSize) for svcRtxMessageQueueGetMsgSize
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetMsgSize) refers to rtx_msgqueue.o(.text.osMessageQueueGetMsgSize) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetMsgSize) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetMsgSize) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetCount) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount) for svcRtxMessageQueueGetCount
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCount) refers to rtx_msgqueue.o(.text.osMessageQueueGetCount) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCount) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueGetSpace) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetSpace) for svcRtxMessageQueueGetSpace
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetSpace) refers to rtx_msgqueue.o(.text.osMessageQueueGetSpace) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetSpace) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetSpace) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueReset) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueReset) for svcRtxMessageQueueReset
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueReset) refers to rtx_msgqueue.o(.text.osMessageQueueReset) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osMessageQueueDelete) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) for svcRtxMessageQueueDelete
+    rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueDelete) refers to rtx_msgqueue.o(.text.osMessageQueueDelete) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_memory.o(.text.osRtxMemoryAlloc) for osRtxMemoryAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rt_memclr.o(.text) for __aeabi_memclr
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_mempool.o(.text.osRtxMemoryPoolInit) for osRtxMemoryPoolInit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.text.svcRtxMessageQueueNew) refers to rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) for osRtxMessageQueuePostProcess
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueNew) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueNew) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for MessageQueueRemove
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.ARM.exidx.text.osRtxMessageQueuePostProcess) refers to rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.MessageQueueRemove) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.MessageQueuePut) refers to rtx_msgqueue.o(.text.MessageQueuePut) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetName) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGetName) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_msgqueue.o(.text.svcRtxMessageQueuePut) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueuePut) refers to rtx_msgqueue.o(.text.svcRtxMessageQueuePut) for [Anonymous Symbol]
+    rtx_msgqueue.o(.ARM.exidx.text.MessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueGet) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueGet) for MessageQueueGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for MessageQueueRemove
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadWaitEnter) for osRtxThreadWaitEnter
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_thread.o(.text.osRtxThreadListPut) for osRtxThreadListPut
+    rtx_msgqueue.o(.text.svcRtxMessageQueueGet) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGet) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueGet) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.MessageQueueRemove) for MessageQueueRemove
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.MessageQueueGet) for MessageQueueGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_mempool.o(.text.osRtxMemoryPoolAlloc) for osRtxMemoryPoolAlloc
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadRegPtr) for osRtxThreadRegPtr
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.MessageQueuePut) for MessageQueuePut
+    rtx_msgqueue.o(.text.svcRtxMessageQueueReset) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueReset) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueReset) for [Anonymous Symbol]
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_thread.o(.text.osRtxThreadListGet) for osRtxThreadListGet
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_thread.o(.text.osRtxThreadWaitExit) for osRtxThreadWaitExit
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_memory.o(.text.osRtxMemoryFree) for osRtxMemoryFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_mempool.o(.text.osRtxMemoryPoolFree) for osRtxMemoryPoolFree
+    rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueDelete) refers to rtx_msgqueue.o(.text.svcRtxMessageQueueDelete) for [Anonymous Symbol]
+    rtx_system.o(.text.osRtxTick_Handler) refers to os_systick.o(.text.OS_Tick_AcknowledgeIRQ) for OS_Tick_AcknowledgeIRQ
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadDelayTick) for osRtxThreadDelayTick
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadListRemove) for osRtxThreadListRemove
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadReadyPut) for osRtxThreadReadyPut
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_thread.o(.text.osRtxThreadSwitch) for osRtxThreadSwitch
+    rtx_system.o(.text.osRtxTick_Handler) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_system.o(.ARM.exidx.text.osRtxTick_Handler) refers to rtx_system.o(.text.osRtxTick_Handler) for [Anonymous Symbol]
+    rtx_system.o(.text.osRtxPendSV_Handler) refers to rtx_thread.o(.text.osRtxThreadDispatch) for osRtxThreadDispatch
+    rtx_system.o(.text.osRtxPendSV_Handler) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_system.o(.ARM.exidx.text.osRtxPendSV_Handler) refers to rtx_system.o(.text.osRtxPendSV_Handler) for [Anonymous Symbol]
+    rtx_system.o(.text.osRtxPostProcess) refers to rtx_config.o(i.osRtxErrorNotify) for osRtxErrorNotify
+    rtx_system.o(.text.osRtxPostProcess) refers to rtx_kernel.o(.data.os) for osRtxInfo
+    rtx_system.o(.ARM.exidx.text.osRtxPostProcess) refers to rtx_system.o(.text.osRtxPostProcess) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_Setup) refers to system_mdr32f9qx.o(.data) for SystemCoreClock
+    os_systick.o(.text.OS_Tick_Setup) refers to os_systick.o(.bss.PendST) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_Setup) refers to os_systick.o(.text.OS_Tick_Setup) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_Enable) refers to os_systick.o(.bss.PendST) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_Enable) refers to os_systick.o(.text.OS_Tick_Enable) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_Disable) refers to os_systick.o(.bss.PendST) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_Disable) refers to os_systick.o(.text.OS_Tick_Disable) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_AcknowledgeIRQ) refers to os_systick.o(.text.OS_Tick_AcknowledgeIRQ) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetIRQn) refers to os_systick.o(.text.OS_Tick_GetIRQn) for [Anonymous Symbol]
+    os_systick.o(.text.OS_Tick_GetClock) refers to system_mdr32f9qx.o(.data) for SystemCoreClock
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetClock) refers to os_systick.o(.text.OS_Tick_GetClock) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetInterval) refers to os_systick.o(.text.OS_Tick_GetInterval) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetCount) refers to os_systick.o(.text.OS_Tick_GetCount) for [Anonymous Symbol]
+    os_systick.o(.ARM.exidx.text.OS_Tick_GetOverflow) refers to os_systick.o(.text.OS_Tick_GetOverflow) for [Anonymous Symbol]
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_InDataSent) refers to usbd_config_0.o(i.USBD_Class_Endpoint0_InDataSent) for USBD_Class_Endpoint0_InDataSent
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_InDataSent) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_OutDataReceived) refers to usbd_config_0.o(i.USBD_Class_Endpoint0_OutDataReceived) for USBD_Class_Endpoint0_OutDataReceived
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_OutDataReceived) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketProcessed) refers to usbd_config_0.o(i.USBD_Class_Endpoint0_SetupPacketProcessed) for USBD_Class_Endpoint0_SetupPacketProcessed
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketProcessed) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketReceived) refers to usbd_config_0.o(i.USBD_Class_Endpoint0_SetupPacketReceived) for USBD_Class_Endpoint0_SetupPacketReceived
+    usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketReceived) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_ClearFeatureStall_MSC) refers to usbd_lib_msc.o(i.USBD_MSC_EndpointClearFeatureStall) for USBD_MSC_EndpointClearFeatureStall
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_ClearFeatureStall_MSC) refers to usbd_config_0.o(.constdata) for usbd_msc_ptr
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) refers to usbd_lib_msc.o(i.USBD_MSC_BulkOnlyMassStorageReset) for USBD_MSC_BulkOnlyMassStorageReset
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) refers to usbd_lib_core.o(i.USBD_StatusInStage) for USBD_StatusInStage
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) refers to usbd_lib_msc.o(i.USBD_MSC_GetMaxLUN) for USBD_MSC_GetMaxLUN
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) refers to usbd_lib_core.o(i.USBD_DataInStage) for USBD_DataInStage
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) refers to usbd_lib_core.o(i.USBD_StatusOutStage) for USBD_StatusOutStage
+    usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF) refers to usbd_config_0.o(.constdata) for usbd_dev_num
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    aeabi_memset.o(.text) refers to rt_memclr.o(.text) for _memset
+    rt_memclr.o(.text) refers to rt_memclr_w.o(.text) for _memset_w
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_ldiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to rtx_lib.o(i._platform_post_stackheap_init) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_mdr32f9qx.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    usbd_lib_core_msc.o(.ARM.RL_ARM1) refers to usbd_lib_core_msc.o(.ARM.RL_ARM2) for .ARM.RL_ARM2
+    usbd_lib_core_msc.o(.ARM.RL_ARM2) refers to usbd_lib_core_msc.o(.ARM.RL_ARM3) for .ARM.RL_ARM3
+    usbd_lib_core_msc.o(.ARM.RL_ARM3) refers to usbd_lib_core_msc.o(.ARM.RL_ARM4) for .ARM.RL_ARM4
+    usbd_lib_core_msc.o(.ARM.RL_ARM4) refers to usbd_lib_core_msc.o(.ARM.RL_ARM5) for .ARM.RL_ARM5
+    usbd_lib_core_msc.o(.ARM.RL_ARM5) refers to usbd_lib_core_msc.o(.ARM.RL_ARM6) for .ARM.RL_ARM6
+    usbd_lib_core_msc.o(.ARM.RL_ARM6) refers to usbd_lib_core_msc.o(.ARM.RL_ARM1) for .ARM.RL_ARM1
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing main.o(i.USB_CDC_GetLineCoding), (24 bytes).
+    Removing main.o(i.USB_CDC_RecieveData), (20 bytes).
+    Removing main.o(i.USB_CDC_SetLineCoding), (28 bytes).
+    Removing rtx_lib.o(.rev16_text), (4 bytes).
+    Removing rtx_lib.o(.revsh_text), (4 bytes).
+    Removing rtx_lib.o(.rrx_text), (6 bytes).
+    Removing rtx_lib.o(i.__user_perthread_libspace), (88 bytes).
+    Removing rtx_lib.o(.bss.os.libspace), (496 bytes).
+    Removing rtx_config.o(.rev16_text), (4 bytes).
+    Removing rtx_config.o(.revsh_text), (4 bytes).
+    Removing rtx_config.o(.rrx_text), (6 bytes).
+    Removing rtx_config.o(i.osRtxIdleThread), (4 bytes).
+    Removing system_mdr32f9qx.o(.rev16_text), (4 bytes).
+    Removing system_mdr32f9qx.o(.revsh_text), (4 bytes).
+    Removing system_mdr32f9qx.o(.rrx_text), (6 bytes).
+    Removing mdr32f9qx_usb.o(.rev16_text), (4 bytes).
+    Removing mdr32f9qx_usb.o(.revsh_text), (4 bytes).
+    Removing mdr32f9qx_usb.o(.rrx_text), (6 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_BRGInit), (60 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHFN), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHIM), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHIS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXCS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXFD), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXFDC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXP), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHRXS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHSCR), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHSTM), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHSVR), (36 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXFD), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXLC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXSE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetHTXT), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxCTRL), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxNTS), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxRXFC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxRXFD), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxRXFDC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxSTS), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxTS), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxTXFD), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSEPxTXFDC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSFN), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSIM), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSIS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_GetSLS), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_Reset), (30 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SEPxToggleEPDATASEQ), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHIM), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHIS), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHRXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHSCR), (32 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXC), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXE), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXFC), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXFD), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXLC), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXSE), (28 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetHTXT), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSA), (12 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSC), (32 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSEPxCTRL), (44 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSEPxRXFC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSEPxTXFD), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSEPxTXFDC), (16 bytes).
+    Removing mdr32f9qx_usb.o(i.USB_SetSIS), (12 bytes).
+    Removing usbd_config_0.o(.rev16_text), (4 bytes).
+    Removing usbd_config_0.o(.revsh_text), (4 bytes).
+    Removing usbd_config_0.o(.rrx_text), (6 bytes).
+    Removing usbd_config_0.o(i.USBD0_SignalDeviceEvent), (14 bytes).
+    Removing usbd_config_0.o(i.USBD0_SignalEndpointEvent), (18 bytes).
+    Removing usbd_config_0.o(i.USBD_ClassInitialize), (64 bytes).
+    Removing usbd_config_0.o(i.USBD_ClassUninitialize), (64 bytes).
+    Removing usbd_config_0.o(i.USBD_Class_Endpoint0_InDataSent), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Class_Endpoint0_OutDataReceived), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Class_Endpoint0_SetupPacketProcessed), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Class_Endpoint0_SetupPacketReceived), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Delay), (64 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_ConfigurationChanged), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_DisableRemoteWakeup), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_EnableRemoteWakeup), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Endpoint0_InDataSent), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Endpoint0_OutDataReceived), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Endpoint0_SetupPacketProcessed), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Endpoint0_SetupPacketReceived), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_EventReset), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_HighSpeedActivated), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Initialize), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Reset), (8 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Resumed), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Suspended), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_Uninitialize), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Device0_VbusChanged), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Out_ADC_ReqToEP), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Out_ADC_ReqToIF), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Out_CDC_ReqToIF), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Out_HID_ReqToIF), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_ReqGetDescriptor_HID), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_ReqGetExtProp_CC), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Setup_ADC_ReqToEP), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Setup_ADC_ReqToIF), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Setup_CDC_ReqToIF), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Endpoint0_Setup_HID_ReqToIF), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_EndpointStart), (84 bytes).
+    Removing usbd_config_0.o(i.USBD_EndpointStop), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_CheckMedia), (4 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_GetCacheInfo), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_GetMaxLUN), (4 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_GetMediaCapacity), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_Initialize), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_LUN_CheckMedia), (10 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_LUN_GetMediaCapacity), (18 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_LUN_Read), (26 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_LUN_StartStop), (14 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_LUN_Write), (26 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_Read), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_StartStop), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_Uninitialize), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_MSC0_Write), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_Reset), (52 bytes).
+    Removing usbd_config_0.o(i.USBD_SemaphoreAcquire), (80 bytes).
+    Removing usbd_config_0.o(i.USBD_SemaphoreCreate), (124 bytes).
+    Removing usbd_config_0.o(i.USBD_SemaphoreDelete), (20 bytes).
+    Removing usbd_config_0.o(i.USBD_SemaphoreRelease), (20 bytes).
+    Removing usbd_config_0.o(i.USBD_SetConfiguration), (2 bytes).
+    Removing usbd_config_0.o(i.USBD_ThreadCreate), (204 bytes).
+    Removing usbd_config_0.o(i.USBD_ThreadFlagsSet), (22 bytes).
+    Removing usbd_config_0.o(i.USBD_ThreadFlagsWait), (116 bytes).
+    Removing usbd_config_0.o(i.USBD_ThreadTerminate), (20 bytes).
+    Removing usbd_config_0.o(i.USBD_TimerCreate), (6 bytes).
+    Removing usbd_config_0.o(i.USBD_TimerDelete), (20 bytes).
+    Removing usbd_config_0.o(i.USBD_TimerStart), (80 bytes).
+    Removing usbd_config_0.o(i.USBD_TimerStop), (20 bytes).
+    Removing usbd_config_0.o(.bss), (990 bytes).
+    Removing usbd_config_0.o(.bss.os.semaphore.cb), (80 bytes).
+    Removing usbd_config_0.o(.bss.os.thread.cb), (136 bytes).
+    Removing usbd_config_0.o(.bss.os.thread.stack), (1024 bytes).
+    Removing usbd_config_0.o(.constdata), (438 bytes).
+    Removing usbd_config_0.o(.conststring), (69 bytes).
+    Removing usbd_config_0.o(.data), (104 bytes).
+    Removing rtx_kernel.o(.text), (0 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osRtxKernelPreInit), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelInitialize), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetInfo), (48 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetInfo), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetInfo), (48 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetInfo), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetState), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetState), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelStart), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelStart), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelLock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelLock), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelUnlock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelUnlock), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelRestoreLock), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelRestoreLock), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelSuspend), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelSuspend), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelResume), (32 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelResume), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetTickCount), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetTickCount), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetTickCount), (12 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickCount), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetTickFreq), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetTickFreq), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetTickFreq), (12 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetTickFreq), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetSysTimerCount), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerCount), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetSysTimerCount), (40 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerCount), (8 bytes).
+    Removing rtx_kernel.o(.text.osKernelGetSysTimerFreq), (36 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.osKernelGetSysTimerFreq), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelGetSysTimerFreq), (4 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelGetSysTimerFreq), (8 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelInitialize), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelStart), (136 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelStart), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelLock), (32 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelLock), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelUnlock), (32 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelUnlock), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelRestoreLock), (44 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelRestoreLock), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelSuspend), (80 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelSuspend), (8 bytes).
+    Removing rtx_kernel.o(.text.svcRtxKernelResume), (140 bytes).
+    Removing rtx_kernel.o(.ARM.exidx.text.svcRtxKernelResume), (8 bytes).
+    Removing rtx_thread.o(.text), (0 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListPut), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListGet), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListSort), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListRemove), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadReadyPut), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayTick), (8 bytes).
+    Removing rtx_thread.o(.text.osRtxThreadRegPtr), (6 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadRegPtr), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadSwitch), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadStackCheck), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDispatch), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadBlock), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitExit), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayRemove), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadWaitEnter), (8 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadDelayInsert), (8 bytes).
+    Removing rtx_thread.o(.text.osRtxThreadStartup), (64 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadStartup), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadNew), (476 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadNew), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadNew), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadNew), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetName), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetName), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetId), (40 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetId), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetId), (12 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetId), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetState), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetState), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetStackSize), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetStackSize), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetStackSpace), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetStackSpace), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadSetPriority), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadSetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetPriority), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadYield), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadYield), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadSuspend), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadSuspend), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadResume), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadResume), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadDetach), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadDetach), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadJoin), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadJoin), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadExit), (12 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadExit), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadTerminate), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadTerminate), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadGetCount), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadGetCount), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadEnumerate), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadEnumerate), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsSet), (88 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsSet), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsClear), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsClear), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsGet), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsGet), (8 bytes).
+    Removing rtx_thread.o(.text.osThreadFlagsWait), (36 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osThreadFlagsWait), (8 bytes).
+    Removing rtx_thread.o(.text.osRtxThreadPostProcess), (42 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadPostProcess), (8 bytes).
+    Removing rtx_thread.o(.text.ThreadFlagsCheck), (106 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.ThreadFlagsCheck), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetName), (16 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetName), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetState), (22 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetState), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetStackSize), (16 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSize), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetStackSpace), (64 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetStackSpace), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadSetPriority), (76 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadSetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetPriority), (26 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetPriority), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadYield), (56 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadYield), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadSuspend), (140 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadSuspend), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadResume), (56 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadResume), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadDetach), (60 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadDetach), (8 bytes).
+    Removing rtx_thread.o(.text.osRtxThreadListUnlink), (32 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadListUnlink), (8 bytes).
+    Removing rtx_thread.o(.text.osRtxThreadFree), (88 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.osRtxThreadFree), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadJoin), (88 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadJoin), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadExit), (112 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadExit), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadTerminate), (192 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadTerminate), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadGetCount), (56 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadGetCount), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadEnumerate), (104 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadEnumerate), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsSet), (102 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsSet), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsClear), (52 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsClear), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsGet), (20 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsGet), (8 bytes).
+    Removing rtx_thread.o(.text.svcRtxThreadFlagsWait), (76 bytes).
+    Removing rtx_thread.o(.ARM.exidx.text.svcRtxThreadFlagsWait), (8 bytes).
+    Removing rtx_delay.o(.text), (0 bytes).
+    Removing rtx_delay.o(.text.osDelay), (36 bytes).
+    Removing rtx_delay.o(.ARM.exidx.text.osDelay), (8 bytes).
+    Removing rtx_delay.o(.text.osDelayUntil), (36 bytes).
+    Removing rtx_delay.o(.ARM.exidx.text.osDelayUntil), (8 bytes).
+    Removing rtx_delay.o(.text.svcRtxDelay), (20 bytes).
+    Removing rtx_delay.o(.ARM.exidx.text.svcRtxDelay), (8 bytes).
+    Removing rtx_delay.o(.text.svcRtxDelayUntil), (32 bytes).
+    Removing rtx_delay.o(.ARM.exidx.text.svcRtxDelayUntil), (8 bytes).
+    Removing rtx_timer.o(.text), (0 bytes).
+    Removing rtx_timer.o(.text.osRtxTimerThread), (60 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osRtxTimerThread), (8 bytes).
+    Removing rtx_timer.o(.text.osRtxTimerTick), (88 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osRtxTimerTick), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerNew), (48 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerNew), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerGetName), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerGetName), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerStart), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerStart), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerStop), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerStop), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerIsRunning), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerIsRunning), (8 bytes).
+    Removing rtx_timer.o(.text.osTimerDelete), (36 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.osTimerDelete), (8 bytes).
+    Removing rtx_timer.o(.text.TimerInsert), (80 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.TimerInsert), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerNew), (124 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerNew), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerGetName), (16 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerGetName), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerStart), (76 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerStart), (8 bytes).
+    Removing rtx_timer.o(.text.TimerRemove), (40 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.TimerRemove), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerStop), (40 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerStop), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerIsRunning), (24 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerIsRunning), (8 bytes).
+    Removing rtx_timer.o(.text.svcRtxTimerDelete), (76 bytes).
+    Removing rtx_timer.o(.ARM.exidx.text.svcRtxTimerDelete), (8 bytes).
+    Removing rtx_mutex.o(.text), (0 bytes).
+    Removing rtx_mutex.o(.text.osRtxMutexOwnerRelease), (74 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osRtxMutexOwnerRelease), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexNew), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexGetName), (36 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexGetName), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexAcquire), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexRelease), (8 bytes).
+    Removing rtx_mutex.o(.text.osMutexGetOwner), (36 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexGetOwner), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.osMutexDelete), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexNew), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexGetName), (16 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetName), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexAcquire), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexRelease), (8 bytes).
+    Removing rtx_mutex.o(.text.svcRtxMutexGetOwner), (20 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexGetOwner), (8 bytes).
+    Removing rtx_mutex.o(.ARM.exidx.text.svcRtxMutexDelete), (8 bytes).
+    Removing rtx_semaphore.o(.text), (0 bytes).
+    Removing rtx_semaphore.o(.text.osSemaphoreNew), (36 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osSemaphoreNew), (8 bytes).
+    Removing rtx_semaphore.o(.text.osSemaphoreGetName), (36 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osSemaphoreGetName), (8 bytes).
+    Removing rtx_semaphore.o(.text.osSemaphoreAcquire), (84 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osSemaphoreAcquire), (8 bytes).
+    Removing rtx_semaphore.o(.text.osSemaphoreRelease), (100 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osSemaphoreRelease), (8 bytes).
+    Removing rtx_semaphore.o(.text.osSemaphoreGetCount), (48 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osSemaphoreGetCount), (8 bytes).
+    Removing rtx_semaphore.o(.text.svcRtxSemaphoreGetCount), (16 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreGetCount), (8 bytes).
+    Removing rtx_semaphore.o(.text.osSemaphoreDelete), (36 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osSemaphoreDelete), (8 bytes).
+    Removing rtx_semaphore.o(.text.svcRtxSemaphoreNew), (128 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreNew), (8 bytes).
+    Removing rtx_semaphore.o(.text.osRtxSemaphorePostProcess), (54 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.osRtxSemaphorePostProcess), (8 bytes).
+    Removing rtx_semaphore.o(.text.svcRtxSemaphoreGetName), (16 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreGetName), (8 bytes).
+    Removing rtx_semaphore.o(.text.svcRtxSemaphoreAcquire), (88 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreAcquire), (8 bytes).
+    Removing rtx_semaphore.o(.text.svcRtxSemaphoreRelease), (84 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreRelease), (8 bytes).
+    Removing rtx_semaphore.o(.text.svcRtxSemaphoreDelete), (96 bytes).
+    Removing rtx_semaphore.o(.ARM.exidx.text.svcRtxSemaphoreDelete), (8 bytes).
+    Removing usbd_lib_core.o(.rev16_text), (4 bytes).
+    Removing usbd_lib_core.o(.revsh_text), (4 bytes).
+    Removing usbd_lib_core.o(.rrx_text), (6 bytes).
+    Removing usbd_lib_core.o(i.USBD0_Core_Thread), (6 bytes).
+    Removing usbd_lib_core.o(i.USBD1_Core_Thread), (6 bytes).
+    Removing usbd_lib_core.o(i.USBD2_Core_Thread), (6 bytes).
+    Removing usbd_lib_core.o(i.USBD3_Core_Thread), (6 bytes).
+    Removing usbd_lib_core.o(i.USBD_CheckDevice), (40 bytes).
+    Removing usbd_lib_core.o(i.USBD_Configured), (36 bytes).
+    Removing usbd_lib_core.o(i.USBD_Connect), (24 bytes).
+    Removing usbd_lib_core.o(i.USBD_Core), (216 bytes).
+    Removing usbd_lib_core.o(i.USBD_Core_Thread), (148 bytes).
+    Removing usbd_lib_core.o(i.USBD_DataInStage), (100 bytes).
+    Removing usbd_lib_core.o(i.USBD_DataOutStage), (44 bytes).
+    Removing usbd_lib_core.o(i.USBD_Disconnect), (24 bytes).
+    Removing usbd_lib_core.o(i.USBD_Endpoint0), (896 bytes).
+    Removing usbd_lib_core.o(i.USBD_EndpointAbort), (28 bytes).
+    Removing usbd_lib_core.o(i.USBD_EndpointRead), (40 bytes).
+    Removing usbd_lib_core.o(i.USBD_EndpointReadGetResult), (28 bytes).
+    Removing usbd_lib_core.o(i.USBD_EndpointStall), (76 bytes).
+    Removing usbd_lib_core.o(i.USBD_EndpointWrite), (42 bytes).
+    Removing usbd_lib_core.o(i.USBD_EndpointWriteGetResult), (30 bytes).
+    Removing usbd_lib_core.o(i.USBD_GetState), (24 bytes).
+    Removing usbd_lib_core.o(i.USBD_GetVersion), (12 bytes).
+    Removing usbd_lib_core.o(i.USBD_Initialize), (432 bytes).
+    Removing usbd_lib_core.o(i.USBD_ReqGetDescriptor), (404 bytes).
+    Removing usbd_lib_core.o(i.USBD_ReqGetMSDescriptor), (180 bytes).
+    Removing usbd_lib_core.o(i.USBD_ReqGetStatus), (180 bytes).
+    Removing usbd_lib_core.o(i.USBD_ReqSetClrFeature), (272 bytes).
+    Removing usbd_lib_core.o(i.USBD_ReqSetConfiguration), (616 bytes).
+    Removing usbd_lib_core.o(i.USBD_ReqSetInterface), (408 bytes).
+    Removing usbd_lib_core.o(i.USBD_ResetCore), (40 bytes).
+    Removing usbd_lib_core.o(i.USBD_SetSerialNumber), (100 bytes).
+    Removing usbd_lib_core.o(i.USBD_StatusInStage), (10 bytes).
+    Removing usbd_lib_core.o(i.USBD_StatusInStageDone), (16 bytes).
+    Removing usbd_lib_core.o(i.USBD_StatusOutStage), (10 bytes).
+    Removing usbd_lib_core.o(i.USBD_StatusOutStageDone), (48 bytes).
+    Removing usbd_lib_core.o(i.USBD_Uninitialize), (392 bytes).
+    Removing usbd_lib_core.o(.data), (16 bytes).
+    Removing usbd_lib_drv.o(.rev16_text), (4 bytes).
+    Removing usbd_lib_drv.o(.revsh_text), (4 bytes).
+    Removing usbd_lib_drv.o(.rrx_text), (6 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverDeviceConnect), (104 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverDeviceDisconnect), (104 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverDeviceGetState), (108 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverDeviceRemoteWakeup), (104 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverDeviceSetAddress), (108 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverEndpointConfigure), (208 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverEndpointStall), (180 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverEndpointTransfer), (228 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverEndpointTransferAbort), (180 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverEndpointTransferGetResult), (120 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverEndpointUnconfigure), (180 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverGetCapabilities), (16 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverGetFrameNumber), (76 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverGetVersion), (16 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverInitialize), (112 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverPowerControl), (108 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverReadSetupPacket), (108 bytes).
+    Removing usbd_lib_drv.o(i.USBD_DriverUninitialize), (104 bytes).
+    Removing usbd_lib_drv.o(i.USBD_SignalDeviceEvent), (16 bytes).
+    Removing usbd_lib_drv.o(i.USBD_SignalEndpointEvent), (72 bytes).
+    Removing usbd_lib_msc.o(.rev16_text), (4 bytes).
+    Removing usbd_lib_msc.o(.revsh_text), (4 bytes).
+    Removing usbd_lib_msc.o(.rrx_text), (6 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC0_Thread), (6 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC1_Thread), (6 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC2_Thread), (6 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC3_Thread), (6 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_BulkOnlyMassStorageReset), (60 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataIn), (48 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_CheckCommandDataOut), (52 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_CheckCommandNoData), (48 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_CheckInstance), (72 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_CheckMediaHW), (108 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_DataInTransfer), (72 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_EndpointClearFeatureStall), (72 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_EndpointStart), (72 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_EpBulkIn), (128 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_GetCBW), (600 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_GetMaxLUN), (84 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_Initialize), (148 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_Inquiry), (332 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_MemoryRead), (272 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_MemoryWrite), (304 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_RW_Setup), (228 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_ReadCapacity), (192 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_ReadFormatCapacity), (204 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_RequestSense), (180 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_Reset), (100 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_SetCSW), (52 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_SetStallEP), (72 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_StartStopUnit), (92 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_StatusFailed), (88 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_StatusPassed), (36 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_StatusPhaseError), (84 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_Thread), (152 bytes).
+    Removing usbd_lib_msc.o(i.USBD_MSC_Uninitialize), (84 bytes).
+    Removing usbd_lib_msc.o(.data), (24 bytes).
+    Removing rtx_memory.o(.text), (0 bytes).
+    Removing rtx_memory.o(.ARM.exidx.text.osRtxMemoryInit), (8 bytes).
+    Removing rtx_memory.o(.ARM.exidx.text.osRtxMemoryAlloc), (8 bytes).
+    Removing rtx_memory.o(.ARM.exidx.text.osRtxMemoryFree), (8 bytes).
+    Removing rtx_mempool.o(.text), (0 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolInit), (8 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolAlloc), (8 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolFree), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolNew), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolNew), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetName), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetName), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolAlloc), (104 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolAlloc), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolFree), (72 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolFree), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetCapacity), (48 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCapacity), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetCapacity), (16 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCapacity), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetBlockSize), (48 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetBlockSize), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetBlockSize), (16 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetBlockSize), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetCount), (48 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetCount), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetCount), (16 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetCount), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolGetSpace), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolGetSpace), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetSpace), (20 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetSpace), (8 bytes).
+    Removing rtx_mempool.o(.text.osMemoryPoolDelete), (36 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osMemoryPoolDelete), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolNew), (332 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolNew), (8 bytes).
+    Removing rtx_mempool.o(.text.osRtxMemoryPoolPostProcess), (72 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.osRtxMemoryPoolPostProcess), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolGetName), (16 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolGetName), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolAlloc), (92 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolAlloc), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolFree), (100 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolFree), (8 bytes).
+    Removing rtx_mempool.o(.text.svcRtxMemoryPoolDelete), (108 bytes).
+    Removing rtx_mempool.o(.ARM.exidx.text.svcRtxMemoryPoolDelete), (8 bytes).
+    Removing rtx_msgqueue.o(.text), (0 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueNew), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueNew), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetName), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetName), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueuePut), (120 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueuePut), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGet), (108 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGet), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetCapacity), (48 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCapacity), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetCapacity), (16 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCapacity), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetMsgSize), (48 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetMsgSize), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetMsgSize), (16 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetMsgSize), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetCount), (48 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetCount), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount), (16 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetCount), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueGetSpace), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueGetSpace), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetSpace), (20 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetSpace), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueReset), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueReset), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osMessageQueueDelete), (36 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osMessageQueueDelete), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueNew), (308 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueNew), (8 bytes).
+    Removing rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess), (186 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.osRtxMessageQueuePostProcess), (8 bytes).
+    Removing rtx_msgqueue.o(.text.MessageQueueRemove), (28 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.MessageQueueRemove), (8 bytes).
+    Removing rtx_msgqueue.o(.text.MessageQueuePut), (98 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.MessageQueuePut), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGetName), (16 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGetName), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueuePut), (192 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueuePut), (8 bytes).
+    Removing rtx_msgqueue.o(.text.MessageQueueGet), (68 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.MessageQueueGet), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueGet), (224 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueGet), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueReset), (174 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueReset), (8 bytes).
+    Removing rtx_msgqueue.o(.text.svcRtxMessageQueueDelete), (112 bytes).
+    Removing rtx_msgqueue.o(.ARM.exidx.text.svcRtxMessageQueueDelete), (8 bytes).
+    Removing rtx_system.o(.text), (0 bytes).
+    Removing rtx_system.o(.ARM.exidx.text.osRtxTick_Handler), (8 bytes).
+    Removing rtx_system.o(.ARM.exidx.text.osRtxPendSV_Handler), (8 bytes).
+    Removing rtx_system.o(.text.osRtxPostProcess), (116 bytes).
+    Removing rtx_system.o(.ARM.exidx.text.osRtxPostProcess), (8 bytes).
+    Removing os_systick.o(.text), (0 bytes).
+    Removing os_systick.o(.text.OS_Tick_Setup), (64 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_Setup), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_Enable), (44 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_Enable), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_Disable), (48 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_Disable), (8 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_AcknowledgeIRQ), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetIRQn), (6 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetIRQn), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetClock), (12 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetClock), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetInterval), (12 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetInterval), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetCount), (16 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetCount), (8 bytes).
+    Removing os_systick.o(.text.OS_Tick_GetOverflow), (16 bytes).
+    Removing os_systick.o(.ARM.exidx.text.OS_Tick_GetOverflow), (8 bytes).
+    Removing os_systick.o(.bss.PendST), (1 bytes).
+    Removing usb_lib_ver.o(.rev16_text), (4 bytes).
+    Removing usb_lib_ver.o(.revsh_text), (4 bytes).
+    Removing usb_lib_ver.o(.rrx_text), (6 bytes).
+    Removing usbd_lib_core_device.o(.rev16_text), (4 bytes).
+    Removing usbd_lib_core_device.o(.revsh_text), (4 bytes).
+    Removing usbd_lib_core_device.o(.rrx_text), (6 bytes).
+    Removing usbd_lib_core_device.o(i.USBD_Core_Endpoint0_InDataSent), (68 bytes).
+    Removing usbd_lib_core_device.o(i.USBD_Core_Endpoint0_OutDataReceived), (68 bytes).
+    Removing usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketProcessed), (60 bytes).
+    Removing usbd_lib_core_device.o(i.USBD_Core_Endpoint0_SetupPacketReceived), (80 bytes).
+    Removing usbd_lib_core_msc.o(.rev16_text), (4 bytes).
+    Removing usbd_lib_core_msc.o(.revsh_text), (4 bytes).
+    Removing usbd_lib_core_msc.o(.rrx_text), (6 bytes).
+    Removing usbd_lib_core_msc.o(i.USBD_Endpoint0_ClearFeatureStall_MSC), (72 bytes).
+    Removing usbd_lib_core_msc.o(i.USBD_Endpoint0_Setup_MSC_ReqToIF), (184 bytes).
+    Removing usbd_lib_core_msc.o(.ARM.RL_ARM1), (82 bytes).
+    Removing usbd_lib_core_msc.o(.ARM.RL_ARM2), (76 bytes).
+    Removing usbd_lib_core_msc.o(.ARM.RL_ARM3), (45 bytes).
+    Removing usbd_lib_core_msc.o(.ARM.RL_ARM4), (65 bytes).
+    Removing usbd_lib_core_msc.o(.ARM.RL_ARM5), (82 bytes).
+    Removing usbd_lib_core_msc.o(.ARM.RL_ARM6), (77 bytes).
+
+642 unused section(s) (total 29395 bytes) removed from the image.

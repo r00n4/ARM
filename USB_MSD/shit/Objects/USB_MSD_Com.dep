@@ -1,0 +1,101 @@
+Dependencies for Project 'USB_MSD', Target 'Com': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (.\main.c)(0x5E679C4F)(--c99 --gnu -c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections -I C:\git\ARM\USB_MSD\Objects-I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc\MDR32Fx.h)(0x5E5F9668)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D25D706)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F9424)
+I (.\RTE\Device\MDR1986BE92\system_MDR32F9Qx.h)(0x5B0677F6)
+I (.\RTE\USB\MDR32F9Qx_usb_handlers.h)(0x542BEA96)
+I (.\RTE\USB\MDR32F9Qx_usb_default_handlers.h)(0x5B067430)
+I (.\RTE\USB\MDR32F9Qx_usb_CDC.h)(0x5B06741C)
+I (.\RTE\Device\MDR1986BE92\MDR32F9Qx_config.h)(0x5C540D10)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h)(0x5B067348)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_device.h)(0x5B067440)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h)(0x5C540C8A)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_rst_clk.h)(0x5D491B32)
+F (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM3.lib)(0x5D25D708)()
+F (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Source\rtx_lib.c)(0x5D25D708)(--c99 --gnu -c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections -I C:\git\ARM\USB_MSD\Objects-I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\rtx_lib.o --omf_browse .\objects\rtx_lib.crf --depend .\objects\rtx_lib.d)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25D706)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25D706)
+I (.\RTE\CMSIS\RTX_Config.h)(0x5C8F9424)
+I (.\RTE\_Com\RTE_Components.h)(0x5E676A49)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x5D25D708)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x5C8F5DE8)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include\rtx_evr.h)(0x5D25D708)
+F (RTE\CMSIS\RTX_Config.c)(0x5C8F5E24)(--c99 --gnu -c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections -I C:\git\ARM\USB_MSD\Objects-I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\rtx_config.o --omf_browse .\objects\rtx_config.crf --depend .\objects\rtx_config.d)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25D706)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x5D25D708)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x5C8F5DE8)
+F (RTE\CMSIS\RTX_Config.h)(0x5C8F9424)()
+F (RTE\Device\MDR1986BE92\MDR32F9Qx_config.h)(0x5C540D10)()
+F (RTE\Device\MDR1986BE92\startup_MDR32F9Qx.s)(0x5B0677DA)(--cpu Cortex-M3 --pd "__RTX SETA 1" -g --apcs=interwork -I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "USE_MDR32F9Q2_Rev1 SETA 1"--list .\listings\startup_mdr32f9qx.lst --xref -o .\objects\startup_mdr32f9qx.o --depend .\objects\startup_mdr32f9qx.d)
+F (RTE\Device\MDR1986BE92\system_MDR32F9Qx.c)(0x5B0677EA)(--c99 --gnu -c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections -I C:\git\ARM\USB_MSD\Objects-I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\system_mdr32f9qx.o --omf_browse .\objects\system_mdr32f9qx.crf --depend .\objects\system_mdr32f9qx.d)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc\MDR32Fx.h)(0x5E5F9668)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D25D706)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F9424)
+I (.\RTE\Device\MDR1986BE92\system_MDR32F9Qx.h)(0x5B0677F6)
+I (RTE\Device\MDR1986BE92\MDR32F9Qx_config.h)(0x5C540D10)
+F (RTE\Device\MDR1986BE92\system_MDR32F9Qx.h)(0x5B0677F6)()
+F (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\MDR32F9Qx_usb.c)(0x5B0671C2)(--c99 --gnu -c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections -I C:\git\ARM\USB_MSD\Objects-I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\mdr32f9qx_usb.o --omf_browse .\objects\mdr32f9qx_usb.crf --depend .\objects\mdr32f9qx_usb.d)
+I (.\RTE\Device\MDR1986BE92\MDR32F9Qx_config.h)(0x5C540D10)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc\MDR32Fx.h)(0x5E5F9668)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\mpu_armv7.h)(0x5C8F9424)
+I (.\RTE\Device\MDR1986BE92\system_MDR32F9Qx.h)(0x5B0677F6)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h)(0x5C540C8A)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h)(0x5B067348)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_rst_clk.h)(0x5D491B32)
+F (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Lib\ARM\USB_CM3_L.lib)(0x5D5BC4FA)()
+F (RTE\USB\USBD_Config_0.c)(0x5E676A21)(--c99 --gnu -c --cpu Cortex-M3 -D__RTX -g -O0 --apcs=interwork --split_sections -I C:\git\ARM\USB_MSD\Objects-I.\RTE\CMSIS-I.\RTE\Device\MDR1986BE92-I.\RTE\USB-I.\RTE\_Com-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include-IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include-IC:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\usbd_config_0.o --omf_browse .\objects\usbd_config_0.crf --depend .\objects\usbd_config_0.d)
+I (.\RTE\_Com\RTE_Components.h)(0x5E676A49)
+I (RTE\USB\USBD_Config_MSC_0.h)(0x5E676A21)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config.h)(0x5D01EBAC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9B1868)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_def.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_compiler.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D25D706)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_adc.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_cdc.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_hid.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_msc.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\rl_usb.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_os.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x5C8F5DE8)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x5D25D708)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_cdc_acm_rndis.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usb_ms.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\rl_usbd_lib.h)(0x5D01EBAC)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USBD.h)(0x5C8A6ACC)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_USB.h)(0x5C8A6ACC)
+I (C:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Driver\Include\Driver_Common.h)(0x5C8A6ACC)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_compatibility.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_def_0.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_dev_0.c)(0x5D01EBAC)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_def_1.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_def_2.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_def_3.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_cmsis_rtos2.c)(0x5DA6DBF6)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_desc_macros.h)(0x5D146652)
+I (C:\Keil_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include\usbd_config_desc_0.c)(0x5D146652)
+F (RTE\USB\USBD_Config_MSC_0.h)(0x5E676A21)()
