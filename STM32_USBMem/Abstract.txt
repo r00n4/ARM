@@ -1,0 +1,19 @@
+The Memory project is a demo program for the Keil MCBSTM32 Board
+using a ST STM32F103RBT6 Microcontroller.
+
+It demonstrates an USB Memory based on USB Mass Storage Class.
+
+LEDs are used to display the following:
+  - PB8 : LED_RD   is on when USB Device is performing Read access
+  - PB9 : LED_WR   is on when USB Device is performing Write access
+  - PB10: LED_CFG  is on when USB Device is configured
+  - PB11: LED_SUSP is on when USB Device is suspended
+
+The USB Memory is automatically recognized by the host PC
+running Windows which will load a generic Mass Storage driver.
+
+The Memory program is available for the following targets:
+  MCBSTM32: configured for on-chip Flash ROM
+           (used for production or target debugging)
+
+Note: set jumper J1 to PD2 for debugging
