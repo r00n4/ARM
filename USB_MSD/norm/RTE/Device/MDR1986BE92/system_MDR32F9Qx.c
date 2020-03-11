@@ -1,11 +1,55 @@
+/**
+  * FILE system_MDR32F9Qx.c
+  */
 
+
+/** @addtogroup __CMSIS CMSIS
+  * @{
+  */
+
+/** @defgroup MDR1986VE9x
+ *  @{
+ */
+
+/** @addtogroup __MDR32F9QX MDR32F9QX System
+  * @{
+  */
+
+/** @addtogroup System_Private_Includes System Private Includes
+  * @{
+  */
 
 #include "MDR32Fx.h"
 #include "MDR32F9Qx_config.h"
 
+/** @} */ /* End of group System_Private_Includes */
 
+/** @addtogroup __MDR32F9QX_System_Private_Variables MDR32F9QX System Private Variables
+  * @{
+  */
 
-uint32_t SystemCoreClock = (uint32_t)8000000;         //< System Clock Frequency (Core Clock)
+/*******************************************************************************
+*  Clock Definitions
+*******************************************************************************/
+  uint32_t SystemCoreClock = (uint32_t)8000000;         /*!< System Clock Frequency (Core Clock)
+                                                         *   default value */
+
+/** @} */ /* End of group __MDR32F9QX_System_Private_Variables */
+
+/** @addtogroup __MDR32F9QX_System_Private_Functions MDR32F9QX System Private Functions
+  * @{
+  */
+
+/**
+  * @brief  Update SystemCoreClock according to Clock Register Values
+  * @note   None
+  * @param  None
+  * @retval None
+  */
+void SystemCoreClockUpdate (void)
+{
+  uint32_t cpu_c1_freq, cpu_c2_freq, cpu_c3_freq;
+  uint32_t pll_mul;
 
   /* Compute CPU_CLK frequency */
 
@@ -90,3 +134,15 @@ void SystemInit (void)
 
   SystemCoreClockUpdate();
 }
+
+/** @} */ /* End of group __MDR32F9QX_System_Private_Functions */
+
+/** @} */ /* End of group __MDR32F9QX */
+
+/** @} */ /* End of group MDR1986VE9x */
+
+/** @} */ /* End of group __CMSIS */
+
+/*
+*
+* END OF FILE system_MDR32F9Qx.c */
