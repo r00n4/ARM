@@ -1,0 +1,22 @@
+Dependencies for Project 'Project', Target '1986VE92U': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (..\User\main.c)(0x5E689D26)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\..\Generic -I ..\User -I "C:\dome_hir\Git\docs_source\ARM\Milandr\Eval_1968BE92Q\From Lyonya\Samples\Sample 2.1\_Project\RTE\_1986BE92U"-I.\RTE\Device\MDR1986BE92-I.\RTE\_1986VE92U-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\dome_hir\Git\docs_source\ARM\Milandr\Eval_1968BE92Q\From Lyonya\Samples\Sample 2.1\User\main.h)(0x5C076095)
+I (C:\dome_hir\Git\docs_source\ARM\Milandr\Eval_1968BE92Q\From Lyonya\Samples\Sample 2.1\User\link.h)(0x5E689BE0)
+F (..\User\led.c)(0x5B8D111E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\..\Generic -I ..\User -I "C:\dome_hir\Git\docs_source\ARM\Milandr\Eval_1968BE92Q\From Lyonya\Samples\Sample 2.1\_Project\RTE\_1986BE92U"-I.\RTE\Device\MDR1986BE92-I.\RTE\_1986VE92U-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (..\User\led.h)(0x5B2A19E5)
+I (..\User\link.h)(0x5E689BE0)
+F (..\User\btn.c)(0x5B2A1874)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\..\Generic -I ..\User -I "C:\dome_hir\Git\docs_source\ARM\Milandr\Eval_1968BE92Q\From Lyonya\Samples\Sample 2.1\_Project\RTE\_1986BE92U"-I.\RTE\Device\MDR1986BE92-I.\RTE\_1986VE92U-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\btn.o --omf_browse .\objects\btn.crf --depend .\objects\btn.d)
+I (..\User\btn.h)(0x5A2A4815)
+I (..\User\link.h)(0x5E689BE0)
+F (RTE\Device\MDR1986BE92\MDR32F9Qx_config.h)(0x5C540D10)()
+F (RTE\Device\MDR1986BE92\startup_MDR32F9Qx.s)(0x5B0677DA)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\Device\MDR1986BE92-I.\RTE\_1986VE92U-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "USE_MDR32F9Q2_Rev1 SETA 1"--list .\listings\startup_mdr32f9qx.lst --xref -o .\objects\startup_mdr32f9qx.o --depend .\objects\startup_mdr32f9qx.d)
+F (RTE\Device\MDR1986BE92\system_MDR32F9Qx.c)(0x5B0677EA)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\..\Generic -I ..\User -I "C:\dome_hir\Git\docs_source\ARM\Milandr\Eval_1968BE92Q\From Lyonya\Samples\Sample 2.1\_Project\RTE\_1986BE92U"-I.\RTE\Device\MDR1986BE92-I.\RTE\_1986VE92U-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport-IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="529" -D_RTE_ -DUSE_MDR32F9Q2_Rev1-o .\objects\system_mdr32f9qx.o --omf_browse .\objects\system_mdr32f9qx.crf --depend .\objects\system_mdr32f9qx.d)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc\MDR32Fx.h)(0x5E5F9668)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport\core_cm3.h)(0x5AF36DC8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B1868)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport\core_cmInstr.h)(0x5AF36DC8)
+I (C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport\core_cmFunc.h)(0x5AF36DC8)
+I (.\RTE\Device\MDR1986BE92\system_MDR32F9Qx.h)(0x5B0677F6)
+I (RTE\Device\MDR1986BE92\MDR32F9Qx_config.h)(0x5C540D10)
+F (RTE\Device\MDR1986BE92\system_MDR32F9Qx.h)(0x5B0677F6)()

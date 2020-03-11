@@ -1,0 +1,10 @@
+.\objects\btn.o: ..\User\btn.c
+.\objects\btn.o: ..\User\btn.h
+.\objects\btn.o: ..\User\link.h
+.\objects\btn.o: C:\git\ARM\Files\MDR32Fx.h
+.\objects\btn.o: C:\git\ARM\Files\core_cm3.h
+.\objects\btn.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\btn.o: C:\git\ARM\Files\system_MDR32F9Qx.h
+.\objects\btn.o: ..\User\led.h
+.\objects\btn.o: ..\User\link.h
+.\objects\btn.o: ..\User\btn.h

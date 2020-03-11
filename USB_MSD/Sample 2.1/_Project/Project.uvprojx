@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Target 1</TargetName>
+      <TargetName>1986VE92U</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:MDR1986BE92$IDE\keil\SVD\MDR1986VE92.svd</SFDFile>
+          <SFDFile>$$Device:MDR1986BE92$IDE\keil\SVD\MDR1986BE92.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -49,7 +49,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>USB_MSD</OutputName>
+          <OutputName>1986VE92U</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -110,11 +110,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -315,7 +315,7 @@
             <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>1</OneElfS>
+            <OneElfS>0</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -325,7 +325,7 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>1</uGnu>
+            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -380,12 +380,22 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>User</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>..\User\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>btn.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\btn.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -399,44 +409,56 @@
   <RTE>
     <apis/>
     <components>
-      <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.5" condition="CON_MDR1986BE9x">
-        <package name="MDR1986BExx" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.5.3"/>
+      <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.3.0" condition="CON_MDR1986BE9x">
+        <package name="MDR1986BExx" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.4L"/>
         <targetInfos>
-          <targetInfo name="Target 1"/>
+          <targetInfo name="1986VE92U"/>
         </targetInfos>
       </component>
     </components>
     <files>
-      <file attr="config" category="header" name="Config\MDR32F9Qx_config.h">
+      <file attr="config" category="source" name="CMSIS\RTOS2\RTX\Config\RTX_Config.c" version="5.1.0">
+        <instance index="0" removed="1">RTE\CMSIS\RTX_Config.c</instance>
+        <component Capiversion="2.1.0" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.1.0" condition="RTOS2 RTX5"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.0.1"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="header" name="CMSIS\RTOS2\RTX\Config\RTX_Config.h" version="5.1.0">
+        <instance index="0" removed="1">RTE\CMSIS\RTX_Config.h</instance>
+        <component Capiversion="2.1.0" Cclass="CMSIS" Cgroup="RTOS2" Csub="Keil RTX5" Cvariant="Library" Cvendor="ARM" Cversion="5.1.0" condition="RTOS2 RTX5"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.0.1"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="header" name="Config\MDR32F9Qx_config.h" version="1.5">
         <instance index="0">RTE\Device\MDR1986BE92\MDR32F9Qx_config.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.5" condition="CON_MDR1986BE9x"/>
         <package name="MDR1986BExx" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.5.3"/>
         <targetInfos>
-          <targetInfo name="Target 1"/>
+          <targetInfo name="1986VE92U"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\startup_MDR32F9Qx.s">
+      <file attr="config" category="source" name="Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\startup_MDR32F9Qx.s" version="1.5">
         <instance index="0">RTE\Device\MDR1986BE92\startup_MDR32F9Qx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.5" condition="CON_MDR1986BE9x"/>
         <package name="MDR1986BExx" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.5.3"/>
         <targetInfos>
-          <targetInfo name="Target 1"/>
+          <targetInfo name="1986VE92U"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.c">
+      <file attr="config" category="source" name="Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.c" version="1.5">
         <instance index="0">RTE\Device\MDR1986BE92\system_MDR32F9Qx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.5" condition="CON_MDR1986BE9x"/>
         <package name="MDR1986BExx" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.5.3"/>
         <targetInfos>
-          <targetInfo name="Target 1"/>
+          <targetInfo name="1986VE92U"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.h">
+      <file attr="config" category="header" name="Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.h" version="1.5">
         <instance index="0">RTE\Device\MDR1986BE92\system_MDR32F9Qx.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.5" condition="CON_MDR1986BE9x"/>
         <package name="MDR1986BExx" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="1.5.3"/>
         <targetInfos>
-          <targetInfo name="Target 1"/>
+          <targetInfo name="1986VE92U"/>
         </targetInfos>
       </file>
     </files>
