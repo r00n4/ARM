@@ -8,5 +8,8 @@ Milandr ic based USB mass storage device
   
   http://visual-coding.com/index.php/zhelezo/stm32/42-statya-1-po-stm
   
-  https://habr.com/ru/post/255323/  
+  https://habr.com/ru/post/255323/    
+    
+      
+      https://forum.milandr.ru/viewtopic.php?f=22&t=3579
   
