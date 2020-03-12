@@ -13,5 +13,7 @@ Milandr ic based USB mass storage device
       
   https://forum.milandr.ru/viewtopic.php?f=22&t=3579
   
-  https://forum.milandr.ru/viewtopic.php?f=14&t=327
+  https://forum.milandr.ru/viewtopic.php?f=14&t=327  
+    
+  http://gimmor.blogspot.com/search?q=%D0%BC%D0%B8%D0%BB%D0%B0%D0%BD%D0%B4%D1%80
   
