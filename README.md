@@ -11,9 +11,9 @@ Milandr ic based USB mass storage device
   [Habr Milandr](https://habr.com/ru/post/255323/)    
     
       
-  https://forum.milandr.ru/viewtopic.php?f=22&t=3579
+  [Mass storage host](https://forum.milandr.ru/viewtopic.php?f=22&t=3579)
   
-  https://forum.milandr.ru/viewtopic.php?f=14&t=327  
+  [Nice resources](https://forum.milandr.ru/viewtopic.php?f=14&t=327)  
     
   http://gimmor.blogspot.com/search?q=%D0%BC%D0%B8%D0%BB%D0%B0%D0%BD%D0%B4%D1%80  
     
