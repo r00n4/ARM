@@ -18,5 +18,5 @@ Milandr ic based USB mass storage device
   http://gimmor.blogspot.com/search?q=%D0%BC%D0%B8%D0%BB%D0%B0%D0%BD%D0%B4%D1%80  
     
   USB ARM description:  
-  [Local file](file:///C:/Keil_v5/Arm/Packs/Keil/MDK-Middleware/7.10.0/Doc/USB/html/_u_s_b__device.html)
+  [Local file](https://file:///C:/Keil_v5/Arm/Packs/Keil/MDK-Middleware/7.10.0/Doc/USB/html/_u_s_b__device.html)
   
