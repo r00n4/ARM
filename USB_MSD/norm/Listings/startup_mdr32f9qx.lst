@@ -320,18 +320,24 @@ ARM Macro Assembler    Page 5
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\objects\startup_mdr32f9qx.d -o.\objects\startup_mdr32f9qx.o -I.\
-RTE\Device\MDR1986BE92 -I.\RTE\_Target_1 -IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\
-Libraries\CMSIS\CM3\CoreSupport -IC:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries
-\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc -IC:\Keil_v5\ARM\CMSIS\Include --predefi
+RTE\CMSIS -I.\RTE\Device\MDR1986BE92 -I.\RTE\USB -I.\RTE\_MDR32F9Qx -IC:\Keil_v
+5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Keil_v5\Arm\Packs\ARM\CMSIS
+\5.6.0\CMSIS\Driver\Include -IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\
 
 
 
 ARM Macro Assembler    Page 6 
 
 
-ne="__UVISION_VERSION SETA 529" --predefine="_RTE_ SETA 1" --predefine="USE_MDR
-32F9Q2_Rev1 SETA 1" --list=.\listings\startup_mdr32f9qx.lst RTE\Device\MDR1986B
-E92\startup_MDR32F9Qx.s
+Include -IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include -IC:\Kei
+l_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include -IC:\Keil_v5\Arm\Packs\Ke
+il\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport -IC:\Keil_v5\Arm\Packs\Keil\MDR198
+6xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc -IC:\Keil_v5\Arm\Packs\Keil
+\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc -IC:\Keil_v5\Arm\Packs\Keil
+\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library --predefine="__
+RTX SETA 1" --predefine="__UVISION_VERSION SETA 529" --predefine="_RTE_ SETA 1"
+ --predefine="USE_MDR32F9Q2_Rev1 SETA 1" --list=.\listings\startup_mdr32f9qx.ls
+t RTE\Device\MDR1986BE92\startup_MDR32F9Qx.s
 
 
 
@@ -841,4 +847,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-387 symbols in table
+388 symbols in table

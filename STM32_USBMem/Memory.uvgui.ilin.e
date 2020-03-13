@@ -1928,9 +1928,9 @@
       </Doc>
       <Doc>
         <Name>.\usbuser.c</Name>
-        <ColumnNumber>0</ColumnNumber>
+        <ColumnNumber>49</ColumnNumber>
         <TopLine>1</TopLine>
-        <CurrentLine>1</CurrentLine>
+        <CurrentLine>33</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>

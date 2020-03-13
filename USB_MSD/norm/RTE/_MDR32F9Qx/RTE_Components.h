@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'USB_MSC' 
- * Target:  'Target 1' 
+ * Target:  'MDR32F9Qx' 
  */
 
 #ifndef RTE_COMPONENTS_H

@@ -1,8 +1,0 @@
---cpu Cortex-M3
-".\objects\main.o"
-".\objects\startup_mdr32f9qx.o"
-".\objects\system_mdr32f9qx.o"
---strict --scatter ".\Objects\USB_MSD.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
---info sizes --info totals --info unused --info veneers
---list ".\Listings\USB_MSD.map" -o .\Objects\USB_MSD.axf
