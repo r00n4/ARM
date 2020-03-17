@@ -21,5 +21,8 @@ Milandr ic based USB mass storage device
   [Local file](https://file:///C:/Keil_v5/Arm/Packs/Keil/MDK-Middleware/7.10.0/Doc/USB/html/_u_s_b__device.html)  
     
   FAT32 microSD:  
-  [solve](http://forum.easyelectronics.ru/viewtopic.php?f=35&t=19787)
+  [solve](http://forum.easyelectronics.ru/viewtopic.php?f=35&t=19787)  
+    
+  C для даунов:  
+  [solve](http://lib.ru/CTOTOR/starterkit.txt)
   
