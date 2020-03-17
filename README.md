@@ -23,6 +23,6 @@ Milandr ic based USB mass storage device
   FAT32 microSD:  
   [solve](http://forum.easyelectronics.ru/viewtopic.php?f=35&t=19787)  
     
-  C для даунов:  
-  [solve](http://lib.ru/CTOTOR/starterkit.txt)
+  **C** для `даунов`:  
+  [lib.ru](http://lib.ru/CTOTOR/starterkit.txt)
   
