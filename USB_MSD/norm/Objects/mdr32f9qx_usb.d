@@ -4,6 +4,6 @@
 .\objects\mdr32f9qx_usb.o: C:\git\ARM\Files\MDR32Fx.h
 .\objects\mdr32f9qx_usb.o: C:\git\ARM\Files\core_cm3.h
 .\objects\mdr32f9qx_usb.o: C:\git\ARM\Files\system_MDR32F9Qx.h
-.\objects\mdr32f9qx_usb.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h
-.\objects\mdr32f9qx_usb.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h
+.\objects\mdr32f9qx_usb.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h
+.\objects\mdr32f9qx_usb.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h
 .\objects\mdr32f9qx_usb.o: C:\git\ARM\Files\MDR32F9Qx_rst_clk.h
