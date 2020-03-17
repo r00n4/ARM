@@ -31,10 +31,34 @@ compiling main.c...
 main.c(185): warning:  #550-D: variable "result"  was set but never used
     USB_Result result;
 main.c: 1 warning, 0 errors
-compiling RTX_Config.c...
+compiling MDR32F9Qx_rst_clk.c...
+..\..\Files\MDR32F9Qx_rst_clk.c(417): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(499): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(648): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(682): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp;
+..\..\Files\MDR32F9Qx_rst_clk.c(864): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(898): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(958): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(994): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(1089): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(1259): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c(1325): warning:  #177-D: variable "temp"  was declared but never referenced
+    uint32_t temp = 0;
+..\..\Files\MDR32F9Qx_rst_clk.c: 11 warnings, 0 errors
 compiling rtx_lib.c...
 assembling startup_MDR32F9Qx.s...
 compiling system_MDR32F9Qx.c...
+compiling RTX_Config.c...
 compiling MDR32F9Qx_usb.c...
 compiling MDR32F9Qx_usb_CDC.c...
 C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library\MDR32F9Qx_usb_CDC.c(478): warning:  #177-D: variable "wValue"  was declared but never referenced
@@ -43,20 +67,11 @@ C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB
 compiling MDR32F9Qx_usb_device.c...
 compiling USBD_Config_0.c...
 linking...
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_CPU_PLLcmd (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_CPU_PLLconfig (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_CPU_PLLstatus (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_CPU_PLLuse (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_CPUclkPrescaler (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_CPUclkSelection (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_HSEconfig (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_HSEstatus (referred from main.o).
-.\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol RST_CLK_PCLKcmd (referred from main.o).
 .\Objects\USB_MSC.axf: Error: L6218E: Undefined symbol Driver_USBD0 (referred from usbd_config_0.o).
 Not enough information to list image symbols.
 Not enough information to list load addresses in the image map.
-Finished: 2 information, 0 warning and 10 error messages.
-".\Objects\USB_MSC.axf" - 10 Error(s), 2 Warning(s).
+Finished: 2 information, 0 warning and 1 error messages.
+".\Objects\USB_MSC.axf" - 1 Error(s), 13 Warning(s).
 
 <h2>Software Packages used:</h2>
 

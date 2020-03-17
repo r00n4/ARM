@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>C:\git\ARM\USB_MSD\norm\RTE\Device\MDR1986BE92;C:\git\ARM\Files;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src</IncludePath>
+              <IncludePath>C:\git\ARM\USB_MSD\norm\RTE\Device\MDR1986BE92;C:\git\ARM\Files;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src; C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Config</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -455,6 +455,11 @@
               <FileName>MDR32F9Qx_rst_clk.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\Files\MDR32F9Qx_rst_clk.h</FilePath>
+            </File>
+            <File>
+              <FileName>MDR32F9Qx_rst_clk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Files\MDR32F9Qx_rst_clk.c</FilePath>
             </File>
           </Files>
         </Group>
