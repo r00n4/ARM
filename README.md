@@ -3,7 +3,8 @@ stm labs
 file:///C:/Program%20Files%20(x86)/Keil_v5/prj/Packs_Target%201.htm  
 <h>USB Device 0
    <o>Connect to hardware via Driver_USBD# <0-255>
-   <i>Select driver control block for hardware interface.
+   <i>Select driver control block for hardware interface.  
+      
 #define USBD0_PORT                      0								
 
    <o.0>High-speed
