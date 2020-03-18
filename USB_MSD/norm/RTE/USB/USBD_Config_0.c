@@ -20,6 +20,7 @@
 //   <o>Connect to hardware via Driver_USBD# <0-255>
 //   <i>Select driver control block for hardware interface.
 #define USBD0_PORT                      0
+#define Driver_USBD											0											
 
 //   <o.0>High-speed
 //   <i>Enable High-speed functionality (if device supports it).

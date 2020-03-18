@@ -57,8 +57,8 @@ compiling MDR32F9Qx_rst_clk.c...
 ..\..\Files\MDR32F9Qx_rst_clk.c: 11 warnings, 0 errors
 compiling rtx_lib.c...
 assembling startup_MDR32F9Qx.s...
-compiling system_MDR32F9Qx.c...
 compiling RTX_Config.c...
+compiling system_MDR32F9Qx.c...
 compiling MDR32F9Qx_usb.c...
 compiling MDR32F9Qx_usb_CDC.c...
 C:\Keil_v5\Arm\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library\MDR32F9Qx_usb_CDC.c(478): warning:  #177-D: variable "wValue"  was declared but never referenced
@@ -125,26 +125,26 @@ Package Vendor: Keil
       Include file:  CMSIS\RTOS2\Include\cmsis_os2.h
 
    * Component: ARM::CMSIS Driver:USB Device:Custom:2.2.0
-      Include file:  CMSIS\Driver\Include\Driver_USBD.h
       Source file:   CMSIS\Driver\DriverTemplates\Driver_USBD.c
+      Include file:  CMSIS\Driver\Include\Driver_USBD.h
 
    * Component: ARM::CMSIS:CORE:5.3.0
 
    * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.1
-      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Semaphore.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Mutex.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
-      Source file:   CMSIS\RTOS2\RTX\Template\main.c
-      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
-      Source file:   CMSIS\RTOS2\RTX\Template\svc_user.c
       Source file:   CMSIS\RTOS2\RTX\Source\rtx_lib.c
-      Library file:  CMSIS\RTOS2\RTX\Library\ARM\RTX_CM3.lib
+      Source file:   CMSIS\RTOS2\RTX\Template\svc_user.c
       Include file:  CMSIS\RTOS2\RTX\Include\rtx_os.h
-      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
-      Source file:   CMSIS\RTOS2\RTX\Template\MemPool.c
-      Include file:  CMSIS\RTOS2\RTX\Config\RTX_Config.h
+      Source file:   CMSIS\RTOS2\RTX\Template\MsgQueue.c
+      Source file:   CMSIS\RTOS2\RTX\Template\main.c
+      Library file:  CMSIS\RTOS2\RTX\Library\ARM\RTX_CM3.lib
       Source file:   CMSIS\RTOS2\RTX\Config\RTX_Config.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Events.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Mutex.c
+      Source file:   CMSIS\RTOS2\RTX\Template\MemPool.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Thread.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Semaphore.c
+      Source file:   CMSIS\RTOS2\RTX\Template\Timer.c
+      Include file:  CMSIS\RTOS2\RTX\Config\RTX_Config.h
 
    * Component: Keil.MDK-Plus::USB:CORE:Release:6.13.7
       Include file:  USB\Include\rl_usb.h
@@ -156,28 +156,28 @@ Package Vendor: Keil
       Source file:   USB\Template\USBD_User_Device_SerNum.c
 
    * Component: Keil.MDK-Plus::USB:Device:MSC:6.13.7
-      Source file:   USB\Template\USBD_User_MSC.c
-      Source file:   USB\Template\USBD_MSC.h
-      Source file:   USB\Template\USBD_MSC.c
-      Source file:   USB\Template\USBD_User_MSC_LUN.c
       Include file:  USB\Config\USBD_Config_MSC.h
+      Source file:   USB\Template\USBD_User_MSC_LUN.c
+      Source file:   USB\Template\USBD_User_MSC.c
+      Source file:   USB\Template\USBD_MSC.c
+      Source file:   USB\Template\USBD_MSC.h
 
    * Component: Keil::Device:Startup:1.5
-      Include file:  Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.h
       Source file:   Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.c
       Source file:   Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\startup_MDR32F9Qx.s
-      Include file:  Config\MDR32F9Qx_config.h
       Include file:  Libraries\CMSIS\CM3\CoreSupport\core_cm3.h
+      Include file:  Config\MDR32F9Qx_config.h
+      Include file:  Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm\system_MDR32F9Qx.h
 
    * Component: Keil::Drivers:USB Library:1.5
-      Source file:   Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library\MDR32F9Qx_usb_device.c
-      Include file:  Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_CDC.h
-      Include file:  Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_device.h
       Source file:   Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library\MDR32F9Qx_usb_CDC.c
+      Include file:  Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_CDC.h
+      Source file:   Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library\MDR32F9Qx_usb_device.c
+      Include file:  Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_device.h
 
    * Component: Keil::Drivers:USB:1.5
-      Include file:  Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h
       Source file:   Libraries\MDR32F9Qx_StdPeriph_Driver\src\MDR32F9Qx_usb.c
+      Include file:  Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h
 Target not created.
 Build Time Elapsed:  00:00:02
 </pre>
