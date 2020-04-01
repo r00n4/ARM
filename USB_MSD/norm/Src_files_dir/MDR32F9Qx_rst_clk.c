@@ -21,7 +21,7 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "MDR32F9Qx_config.h"
+#include "C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Config\MDR32F9Qx_config.h"
 #include "MDR32F9Qx_rst_clk.h"
 
 

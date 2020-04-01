@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>C:\git\ARM\USB_MSD\norm\RTE\Device\MDR1986BE92;C:\git\ARM\Files;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src; C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Config; C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Examples\MDR1986VE9x\MDR32F9Q2_EVAL\USB\VCOM_Echo\USB_CDC_DRIVER</IncludePath>
+              <IncludePath>C:\git\ARM\USB_MSD\norm\RTE\Device\MDR1986BE92;C:\git\ARM\Files;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\startup\arm;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src\USB_Library;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\src;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Config;C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Examples\MDR1986VE9x\MDR32F9Q2_EVAL\USB\VCOM_Echo\USB_CDC_DRIVER</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -460,6 +460,11 @@
               <FileName>MDR32F9Qx_rst_clk.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Files\MDR32F9Qx_rst_clk.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_USBD.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Src_files_dir\Driver_USBD.h</FilePath>
             </File>
           </Files>
         </Group>

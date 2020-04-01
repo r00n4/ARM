@@ -70,7 +70,7 @@
 #elif defined (USE_MDR1986BE4)
 	#include "MDR1986BE4.h"
 #endif*/
-	#include "MDR1986BE4.h"
+	#include "MDR32Fx.h"
 /* Uncomment the line(s) below to define used JTAG port(s). Leave all commented
  * if there is no JTAG ports */
 #if (((!defined(USE_MDR1986VE3)) || (!defined(USE_MDR1986VE1T))) && (defined(USE_MDR1986VE9x)))

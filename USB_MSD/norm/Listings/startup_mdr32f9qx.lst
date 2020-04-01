@@ -331,13 +331,13 @@ ARM Macro Assembler    Page 6
 
 Include -IC:\Keil_v5\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\RTOS2\RTX\Include -IC:\Kei
 l_v5\Arm\Packs\Keil\MDK-Middleware\7.10.0\USB\Include -IC:\Keil_v5\Arm\Packs\Ke
-il\MDR1986xx\Libraries\CMSIS\CM3\CoreSupport -IC:\Keil_v5\Arm\Packs\Keil\MDR198
-6xx\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc -IC:\Keil_v5\Arm\Packs\Keil
-\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc -IC:\Keil_v5\Arm\Packs\Keil
-\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library --predefine="__
-RTX SETA 1" --predefine="__UVISION_VERSION SETA 529" --predefine="_RTE_ SETA 1"
- --predefine="USE_MDR32F9Q2_Rev1 SETA 1" --list=.\listings\startup_mdr32f9qx.ls
-t RTE\Device\MDR1986BE92\startup_MDR32F9Qx.s
+il\MDR1986BExx\1.5.3\Libraries\CMSIS\CM3\CoreSupport -IC:\Keil_v5\Arm\Packs\Kei
+l\MDR1986BExx\1.5.3\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc -IC:\Keil_v
+5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc -IC
+:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver
+\inc\USB_Library --predefine="__RTX SETA 1" --predefine="__UVISION_VERSION SETA
+ 529" --predefine="_RTE_ SETA 1" --predefine="USE_MDR32F9Q2_Rev1 SETA 1" --list
+=.\listings\startup_mdr32f9qx.lst RTE\Device\MDR1986BE92\startup_MDR32F9Qx.s
 
 
 

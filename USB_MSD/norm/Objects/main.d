@@ -3,11 +3,11 @@
 .\objects\main.o: C:\git\ARM\Files\core_cm3.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: C:\git\ARM\Files\system_MDR32F9Qx.h
-.\objects\main.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_handlers.h
-.\objects\main.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_default_handlers.h
-.\objects\main.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_CDC.h
+.\objects\main.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_handlers.h
+.\objects\main.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_default_handlers.h
+.\objects\main.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library\MDR32F9Qx_usb_CDC.h
 .\objects\main.o: C:\git\ARM\USB_MSD\norm\RTE\Device\MDR1986BE92\MDR32F9Qx_config.h
-.\objects\main.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h
-.\objects\main.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library/MDR32F9Qx_usb_device.h
-.\objects\main.o: C:\Keil_v5\ARM\Packs\Keil\MDR1986xx\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h
+.\objects\main.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_lib.h
+.\objects\main.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\USB_Library/MDR32F9Qx_usb_device.h
+.\objects\main.o: C:\Keil_v5\Arm\Packs\Keil\MDR1986BExx\1.5.3\Libraries\MDR32F9Qx_StdPeriph_Driver\inc\MDR32F9Qx_usb.h
 .\objects\main.o: C:\git\ARM\Files\MDR32F9Qx_rst_clk.h
