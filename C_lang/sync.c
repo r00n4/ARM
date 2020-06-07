@@ -14,5 +14,5 @@ lcd.print(N);
 =?UTF-8 ?B? 0 JXQu 9 C 10 L 3 QsCDQktC 70 LDQtNC 40 LzQuNGA 0 L 7 QstC 90 LA=?= <lena_fommina@mail.ru>
 8 0 9 10 3  70 40 0 7 90
 192.168.000.000
-
+jgznm
 809.103.704.007.90
