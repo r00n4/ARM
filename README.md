@@ -26,3 +26,24 @@ Milandr ic based USB mass storage device
   <***C***>   для **даунов** :  
   [lib.ru](http://lib.ru/CTOTOR/starterkit.txt)
   
+#include <stdio.h>
+
+int main () {
+
+    int x= 5, y=7;
+    float z;            // if float --> can't make an output with correct result
+                        // if int --> it returns correct result
+    z= x + y;
+    printf("the result = %f\ n", z);
+    printf("================================================\n");
+    printf ("Characters: %c %c \n", 'a', 65);
+    printf ("Decimals: %d %ld\n", 1977, 650000L);
+    printf ("Preceding with blanks: %10d \n", 1977);
+    printf ("Preceding with zeros: %010d \n", 1977);
+    printf ("Some different radices: %d %x %o %#x %#o \n", 100, 100, 100, 100, 100);
+    printf ("floats: %4.2f %+.0e %E \n", 3.1416, 3.1416, 3.1416);
+    printf ("Width trick: %*d \n", 5, 10);
+    printf ("%s \n", "A string");
+    return 0;
+
+}
